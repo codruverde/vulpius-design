@@ -438,6 +438,7 @@ body::-webkit-scrollbar {
         width: 70%;
         font-weight: 400;
         font-size: 27px;
+        line-height: 140%;
         margin-bottom: 10%;
 
         > a {
@@ -450,7 +451,7 @@ body::-webkit-scrollbar {
 
 @media only screen and (max-width: 980px) {
     #container {
-        grid-template-rows: repeat(10, minmax(100vh, max-content)) 80vh;
+        grid-template-rows: repeat(10, minmax(100svh, max-content)) 80svh;
 
         #about {
             width: 80%;
@@ -473,14 +474,9 @@ body::-webkit-scrollbar {
         .projects {
             > a {
                 width: 70%;
-                min-width: 250px;
-                aspect-ratio: 475/298;
-                box-shadow: var(--shadow);
-                background-size: contain;
-                transition: 0.2s;
             }
             > a:hover {
-                filter: brightness(0.6);
+                filter: none;
             }
         }
 

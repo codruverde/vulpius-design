@@ -15,10 +15,10 @@ const checkbox = document.getElementById('gekko');
   const link2 = document.querySelector('.link2');
   const link3 = document.querySelector('.link3');
   const link4 = document.querySelector('.link4');
-  const viewportHeight = window.innerHeight;
-  const scroll1 = 2.1 * viewportHeight;
-  const scroll2 = 5.15 * viewportHeight;
-  const scroll3 = 10.2 * viewportHeight;
+  const bodyHeight = document.body.offsetHeight;
+  const scroll1 = 0.19 * bodyHeight;
+  const scroll2 = 0.47 * bodyHeight;
+  const scroll3 = 0.9 * bodyHeight;
 
   link1.addEventListener('click', (event) => {
     event.preventDefault();
@@ -47,11 +47,11 @@ const checkbox = document.getElementById('gekko');
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const scrollPosition1 = 0.6 * viewportHeight;
-    const scrollPosition2 = 1.8 * viewportHeight;
-    const scrollPosition3 = 4.8 * viewportHeight;
-    const scrollPosition4 = 9.5 * viewportHeight;
-    const scrollPosition5 = 11 * viewportHeight;
+    const scrollPosition1 = 0.06 * bodyHeight;
+    const scrollPosition2 = 0.15 * bodyHeight;
+    const scrollPosition3 = 0.425 * bodyHeight;
+    const scrollPosition4 = 0.88 * bodyHeight;
+    const scrollPosition5 = 1 * bodyHeight;
 
       if (scrollY <= scrollPosition1) {
         rect1.style.transform = "translate(0)";
