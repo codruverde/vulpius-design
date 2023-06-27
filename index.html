@@ -7,6 +7,7 @@
   <meta name="description" content="This is my design portfolio website">
   <meta name="keywords" content="Teodor Vulpius, Codrin Teodor Vulpoiu, teodorvulpius">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
   <title>Vulpius Design</title>
   <link rel="icon" type="image/x-icon" href="">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +35,8 @@
       <div class="panels" id="about">
           <div class="text about-text">My name is Teodor and I am passionate about UI/UX and information design. On this page you will see some of my projects and method to determine how I can provide value for your work.</div>
       </div>
-      <img src="Road.png" alt="road" id="road">
-      <img src="road-text.png" alt="road-text" id="road-text">
+      <img src="materials/Road.png" alt="road" id="road">
+      <img src="materials/road-text.png" alt="road-text" id="road-text">
       <div class="panels projects project1">
         <a href="https://ancientgreeks.org" target="_blank"></a>
         <div class="projects-description">
@@ -57,120 +58,28 @@
           <div class="text projects-description-text">A project that demonstrates the use of imagery to highlight some of our greatest superheroes. The layout sets the eye to flow from element to element with no significant jumps and the empty space leads to higher contrast and order.</div>
         </div>
       </div>
-      <img src="flexible design.png" alt="flexible design" id="flexible-design">
-      <div id="ultrawide"><img src="Ultrawide.jpg" alt="ultrawide"></div>
-      <div id="mobile-image"><img src="Subtract.jpg" alt="Subtract"></div>
-      <img src="mobile.png" alt="mobile" id="mobile">
+      <img src="materials/flexible design.png" alt="flexible design" id="flexible-design">
+      <div id="ultrawide"><img src="materials/Ultrawide.jpg" alt="ultrawide"></div>
+      <div id="mobile-image"><img src="materials/Subtract.jpg" alt="Subtract"></div>
+      <img src="materials/mobile.png" alt="mobile" id="mobile">
       <div class="panels method method1">
-        <img src="css.jpg" alt="css">
+        <img src="materials/css.jpg" alt="css">
         <div class="text method-text">Staying in touch with latest CSS developments. Compatibility with all devices  is a priority.</div>
       </div>
       <div class="panels method method2">
-        <img src="conventions.png" alt="conventions">
+        <img src="materials/conventions.png" alt="conventions">
         <div class="text method-text">Respect the well known conventions and accessibility guidelines</div>
       </div>
       <div class="panels method method3">
-        <img src="prototype.jpg" alt="prototype">
+        <img src="materials/prototype.jpg" alt="prototype">
         <div class="text method-text">Build prototypes to test the user experience</div>
       </div>
       <div id="what-i-like">
         <div class="text method-text-last">I like visually harmonious designs that<br>are clean, orderly and functional.</div>
-        <img src="grid.png" alt="grid" id="grid">
+        <img src="materials/grid.png" alt="grid" id="grid">
       </div>
       <div class="text contact">Feel free to contact me per email and we can arrange further discussions:<br><a href="mailto:vulpiusteodor@gmail.com">vulpiusteodor@gmail.com</a></div>
   </div>
-
-<script>
-  const checkbox = document.getElementById('gekko');
-  const pres = document.getElementById('presentation');
-  const body = document.body;
-
-  checkbox.addEventListener('change', function() {
-    if (this.checked) {
-      body.style.overflow = 'scroll';
-      setTimeout(function() {
-        pres.style.zIndex = "-1";
-      }, 2200); // Delay of 1 second (1000 milliseconds)
-    }
-  });
-
-  const link1 = document.querySelector('.link1');
-  const link2 = document.querySelector('.link2');
-  const link3 = document.querySelector('.link3');
-  const link4 = document.querySelector('.link4');
-  const viewportHeight = window.innerHeight;
-  const scroll1 = 2.1 * viewportHeight;
-  const scroll2 = 5.15 * viewportHeight;
-  const scroll3 = 10.2 * viewportHeight;
-
-  link1.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.scrollTo({top: 0});
-  });
-  link2.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.scrollTo({top: scroll1});
-  });
-  link3.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.scrollTo({top: scroll2});
-  });
-  link4.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.scrollTo({top: scroll3});
-  });
-
-  const rect1 = document.querySelector('.rect1');
-  const rect2 = document.querySelector('.rect2');
-  const rect3 = document.querySelector('.rect3');
-  const rect4 = document.querySelector('.rect4');
-  const roadtext = document.getElementById('road-text');
-  const ultrawide = document.getElementById("ultrawide").firstChild;
-  const mobile = document.getElementById("mobile-image").firstChild;
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const scrollPosition1 = 0.6 * viewportHeight;
-    const scrollPosition2 = 1.8 * viewportHeight;
-    const scrollPosition3 = 4.8 * viewportHeight;
-    const scrollPosition4 = 9.5 * viewportHeight;
-    const scrollPosition5 = 11 * viewportHeight;
-
-      if (scrollY <= scrollPosition1) {
-        rect1.style.transform = "translate(0)";
-        rect2.style.transform = "translate(3px)";
-        rect3.style.transform = "translate(3px)";
-        rect4.style.transform = "translate(3px)";
-      } else if (scrollY <= scrollPosition2) {
-        rect1.style.transform = "translate(0)";
-        rect2.style.transform = "translate(3px)";
-        rect3.style.transform = "translate(3px)";
-        rect4.style.transform = "translate(3px)";
-        roadtext.style.opacity = "1";
-      } else if (scrollY <= scrollPosition3) {
-        rect1.style.transform = "translate(3px)";
-        rect2.style.transform = "translate(0)";
-        rect3.style.transform = "translate(3px)";
-        rect4.style.transform = "translate(3px)";
-      } 
-      else if (scrollY <= scrollPosition4) {
-        rect1.style.transform = "translate(3px)";
-        rect2.style.transform = "translate(3px)";
-        rect3.style.transform = "translate(0)";
-        rect4.style.transform = "translate(3px)";
-        ultrawide.style.transform = "translate(0)";
-        mobile.style.transform = "translate(0)";
-      } else if (scrollY <= scrollPosition5) {
-        rect1.style.transform = "translate(3px)";
-        rect2.style.transform = "translate(3px)";
-        rect3.style.transform = "translate(3px)";
-        rect4.style.transform = "translate(0)";
-      }
-  });
-
-  if (history.scrollRestoration) {
-    history.scrollRestoration = "manual";
-  };
-</script>    
+  
 </body>
 </html>

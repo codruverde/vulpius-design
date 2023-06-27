@@ -274,21 +274,21 @@ body::-webkit-scrollbar {
         grid-row: 3/4;
 
         > a {
-            background-image: url(ancient\ greeks.jpg);
+            background-image: url(materials/ancient\ greeks.jpg);
         }
     }
     .project2 {
         grid-row: 4/5;
 
         > a {
-            background-image: url(composer.jpg);
+            background-image: url(materials/composer.jpg);
         }
     }
     .project3 {
         grid-row: 5/6;
 
         > a {
-            background-image: url(DC.jpg);
+            background-image: url(materials/DC.jpg);
         }
     }
 
