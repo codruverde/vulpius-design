@@ -54,13 +54,6 @@ body::-webkit-scrollbar {
     justify-content: center;
     z-index: 3;
 
-    & #gekko {
-        visibility: hidden;
-        height: 0;
-        width: 0;
-        display: none;
-    }
-
     .welcome {
         opacity: 0;
         font-weight: 300;
@@ -71,11 +64,12 @@ body::-webkit-scrollbar {
         transition: 0.5s;
     }
 
-    & label {
+    #gekko {
         width: 130px;
         margin: 50px;
         aspect-ratio: 1/1;
         opacity: 0;
+        border: none;
         border-radius: 100%;
         background-color: var(--background);
         order: 2;
@@ -86,27 +80,29 @@ body::-webkit-scrollbar {
         transition: 0.6s ease-out;
     }
 
-    & input:checked ~ :is(label, .welcome) {
+    #gekko:focus ~ .welcome {
         visibility: hidden;
-    }
-    & input:checked ~ label {
-        box-shadow: none;
-    }
-    & input:checked ~ .welcome {
         color: var(--background);
     }
+    #gekko:focus {
+        box-shadow: none;
+        visibility: hidden;
+    }
+    /* #gekko:focus ~ .welcome {
+        color: var(--background);
+    } */
 }
 
-#presentation:has(input:checked) ~ #container > #entering {
+#presentation:has(#gekko:focus) ~ #container > #entering {
     display: none;
 }
-#presentation:has(input:checked) ~ #container > #about {
+#presentation:has(#gekko:focus) ~ #container > #about {
     box-shadow: var(--inner-shadow);
 }
-#presentation:has(input:checked) ~ #container :is(.about-text, #menu) {
+#presentation:has(#gekko:focus) ~ #container :is(.about-text, #menu) {
     opacity: 1;
 }
-#presentation:has(input:checked) ~ #container #menu .menu-links {
+#presentation:has(#gekko:focus) ~ #container #menu .menu-links {
     animation: pullout 3s 1s;
 }
     
