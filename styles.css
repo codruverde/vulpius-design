@@ -115,7 +115,7 @@ body::-webkit-scrollbar {
     max-width: 1600px;
     margin: auto;
     display: grid;
-    grid-template-rows: 100vh 110vh repeat(3, 100vh) 110vh repeat(4, 100vh) 80vh;
+    grid-template-rows: 100vh auto repeat(3, 100vh) repeat(6, auto);
     grid-template-columns: 100%;
     place-items: center;  
 
@@ -235,8 +235,8 @@ body::-webkit-scrollbar {
     #road {
         grid-column: 1/2;
         grid-row: 2/3;
-        width: 50%;
-        height: auto;
+        width: auto;
+        height: 80vh;
         margin-bottom: 5%;
         opacity: 0.8;
         z-index: -1;
@@ -327,7 +327,7 @@ body::-webkit-scrollbar {
         grid-row: 6/7;
         width: 78.35%;
         aspect-ratio: 69/19;
-        margin-top: 5.03%;
+        margin-top: 5.05%;
         overflow: hidden;
 
         > img {
@@ -369,11 +369,12 @@ body::-webkit-scrollbar {
     }
 
     .method {
-        height: 70%;
+        height: 500px;
         box-shadow: var(--outer-shadow);
         grid-column: 1/2;
         justify-content: space-around;
         padding: 50px;
+        margin: 6% 0;
 
         .method-text {
             font-weight: 300;
@@ -403,8 +404,8 @@ body::-webkit-scrollbar {
     }
     .method3 {
         grid-row: 9/10;
-        height: auto;
         justify-content: space-evenly;
+        height: auto;
 
         > img {
             max-width: 50%;
@@ -416,6 +417,8 @@ body::-webkit-scrollbar {
         grid-row: 10/11;
         grid-column: 1/2;
         width: 60%;
+        padding: 50px 0;
+        /* margin-top: 5%; */
         
         #grid {
             width: 100%;
@@ -439,7 +442,8 @@ body::-webkit-scrollbar {
         font-weight: 400;
         font-size: 27px;
         line-height: 140%;
-        margin-bottom: 10%;
+        margin-bottom: 20%;
+        margin-top: 10%;
 
         > a {
             text-decoration: none;
@@ -450,78 +454,74 @@ body::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 980px) {
-    #container {
-        grid-template-rows: repeat(10, minmax(100svh, max-content)) 80svh;
+    #about {
+        width: 80%;
 
-        #about {
-            width: 80%;
-
-            .about-text {
-                font-size: 21px;
-            }
+        .about-text {
+            font-size: 21px;
         }
+    }
 
-        #road {
-            width: 80%;
-            margin-bottom: 0;
-        }
+    #road {
+        margin-bottom: 0;
+    }
 
-        #road-text {
-            width: 90%;
-            margin-bottom: 0;
-        }
+    #road-text {
+        width: 90%;
+        margin-bottom: 0;
+    }
 
-        .projects {
-            > a {
-                width: 70%;
-            }
-            > a:hover {
-                filter: none;
-            }
-        }
-
-        .projects-description {
-            width: 90%;
-            min-width: 0px;
-            
-            > a {
-                margin-bottom: 25px;
-                font-size: 25px;
-            }
-    
-            .projects-description-text {
-                font-size: 21px;
-            }
-        }
-
-        .method {
-            gap: 20px;
-        }
-
-        .method-text {
-            font-size: 25px;
-            min-width: 100%;
-        }
-
-        .method1 {    
-            > img {
-                max-width: 400px;
-                width: 50%;
-            }
-        }
-
-        #what-i-like {
+    .projects {
+        > a {
             width: 70%;
-            
-            .method-text-last {
-                font-size: 25px;
-            }
         }
+        > a:hover {
+            filter: none;
+        }
+    }
 
-        .contact {
+    .projects-description {
+        width: 90%;
+        min-width: 0px;
+        
+        > a {
+            margin-bottom: 25px;
             font-size: 25px;
         }
 
+        .projects-description-text {
+            font-size: 21px;
+        }
+    }
+
+    .method {
+        gap: 20px;
+        height: auto;
+        margin: 10% 0;
+    }
+
+    .method-text {
+        font-size: 25px;
+        min-width: 100%;
+    }
+
+    .method1 {    
+        > img {
+            max-width: 400px;
+            width: 50%;
+        }
+    }
+
+    #what-i-like {
+        width: 70%;
+        
+        .method-text-last {
+            font-size: 25px;
+        }
+    }
+
+    .contact {
+        font-size: 25px;
     }
 }
     

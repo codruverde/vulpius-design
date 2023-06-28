@@ -16,9 +16,8 @@ const checkbox = document.getElementById('gekko');
   const link3 = document.querySelector('.link3');
   const link4 = document.querySelector('.link4');
   const bodyHeight = document.body.offsetHeight;
-  const scroll1 = 0.19 * bodyHeight;
-  const scroll2 = 0.47 * bodyHeight;
-  const scroll3 = 0.9 * bodyHeight;
+  const scroll1 = 0.2 * bodyHeight;
+  const scroll3 = 1.2 * bodyHeight;
 
   link1.addEventListener('click', (event) => {
     event.preventDefault();
@@ -28,10 +27,9 @@ const checkbox = document.getElementById('gekko');
     event.preventDefault();
     window.scrollTo({top: scroll1});
   });
-  link3.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.scrollTo({top: scroll2});
-  });
+  // link3.addEventListener('click', (event) => {
+  //   event.preventDefault();
+  // });
   link4.addEventListener('click', (event) => {
     event.preventDefault();
     window.scrollTo({top: scroll3});
