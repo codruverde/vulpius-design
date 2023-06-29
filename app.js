@@ -50,11 +50,15 @@ const checkbox = document.getElementById('gekko');
   const mobile = document.getElementById("mobile-image").firstChild;
 
   window.addEventListener('scroll', () => {
+    const element2 = document.getElementById('road');
+    const element3 = document.getElementById('flexible-design');
+    const element5 = document.getElementById('contact');
+
     const scrollY = window.scrollY;
-    const scrollPosition1 = 0.06 * bodyHeight;
-    const scrollPosition2 = 0.17 * bodyHeight;
-    const scrollPosition3 = 0.5 * bodyHeight;
-    const scrollPosition4 = 0.99 * bodyHeight;
+    const scrollPosition1 = viewportHeight * 0.6;
+    const scrollPosition2 = element2.offsetTop + (viewportHeight / 2);
+    const scrollPosition3 = element3.offsetTop - (viewportHeight / 2);
+    const scrollPosition4 = element5.offsetTop - (viewportHeight);
     const scrollPosition5 = 1 * bodyHeight;
 
       if (scrollY <= scrollPosition1) {
