@@ -11,30 +11,36 @@ const checkbox = document.getElementById('gekko');
     }
   });
 
+  const viewportHeight = window.innerHeight;
+
+  function scrollToSection(event, id) {
+    event.preventDefault();
+    
+    const element = document.getElementById(id);
+    const elementHeight = element.offsetHeight;
+
+    if (element) {
+      const scrollPosition = element.offsetTop - (viewportHeight / 2) + (elementHeight / 2);
+      
+      window.scrollTo({
+        top: scrollPosition
+      });
+    }
+  };
+
   const link1 = document.querySelector('.link1');
-  const link2 = document.querySelector('.link2');
-  const link3 = document.querySelector('.link3');
   const link4 = document.querySelector('.link4');
-  const bodyHeight = document.body.offsetHeight;
-  const scroll1 = 0.2 * bodyHeight;
-  const scroll3 = 1.2 * bodyHeight;
 
   link1.addEventListener('click', (event) => {
     event.preventDefault();
     window.scrollTo({top: 0});
   });
-  link2.addEventListener('click', (event) => {
-    event.preventDefault();
-    window.scrollTo({top: scroll1});
-  });
-  // link3.addEventListener('click', (event) => {
-  //   event.preventDefault();
-  // });
   link4.addEventListener('click', (event) => {
     event.preventDefault();
-    window.scrollTo({top: scroll3});
+    window.scrollTo({top: document.body.scrollHeight});
   });
 
+  const bodyHeight = document.body.scrollHeight;
   const rect1 = document.querySelector('.rect1');
   const rect2 = document.querySelector('.rect2');
   const rect3 = document.querySelector('.rect3');
@@ -46,9 +52,9 @@ const checkbox = document.getElementById('gekko');
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const scrollPosition1 = 0.06 * bodyHeight;
-    const scrollPosition2 = 0.15 * bodyHeight;
-    const scrollPosition3 = 0.425 * bodyHeight;
-    const scrollPosition4 = 0.88 * bodyHeight;
+    const scrollPosition2 = 0.17 * bodyHeight;
+    const scrollPosition3 = 0.5 * bodyHeight;
+    const scrollPosition4 = 0.99 * bodyHeight;
     const scrollPosition5 = 1 * bodyHeight;
 
       if (scrollY <= scrollPosition1) {
