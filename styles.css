@@ -295,7 +295,7 @@ body::-webkit-scrollbar {
             background-image: url(materials/composer.jpg);
         }
     }
-    .project3 {
+    #project3 {
         grid-row: 5/6;
 
         > a {
@@ -336,14 +336,14 @@ body::-webkit-scrollbar {
     #ultrawide {
         grid-column: 1/2;
         grid-row: 6/7;
-        width: 78.35%;
-        aspect-ratio: 69/19;
-        margin-top: 5.06%;
+        width: 78.38%;
+        aspect-ratio: 71/20;
+        margin-top: 5.2%;
         overflow: hidden;
 
         > img {
             width: 100%;
-            transform: translateY(100%);
+            transform: translateY(110%);
             transition: 1s cubic-bezier(0.34, 0.17, 0.22, 0.98) 0.5s;
         }
     }
@@ -572,8 +572,14 @@ body::-webkit-scrollbar {
             }
         }
 
+        #menu {
+            .menu-links {
+                font-size: 21px;
+            }
+        }
+
         #road {
-            width: 90%;
+            width: 100%;
             height: auto;
             margin-bottom: 10%;
         }
