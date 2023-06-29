@@ -471,6 +471,7 @@ body::-webkit-scrollbar {
 @media (max-width: 980px) {
     #presentation {
         flex-direction: column;
+        height: 100svh;
     }
 
     #container {
