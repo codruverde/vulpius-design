@@ -125,7 +125,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     margin: auto;
     display: grid;
-    grid-template-rows: 100vh auto repeat(3, 100vh) repeat(6, auto);
+    grid-template-rows: 100vh repeat(10, auto);
     grid-template-columns: 100%;
     place-items: center;  
 
@@ -265,6 +265,7 @@ body::-webkit-scrollbar {
 
     .projects {
         padding: 70px 50px;
+        margin: 6% 0;
         box-shadow: var(--inner-shadow);
         align-items: center;
         gap: 30px;
@@ -337,7 +338,7 @@ body::-webkit-scrollbar {
         grid-row: 6/7;
         width: 78.35%;
         aspect-ratio: 69/19;
-        margin-top: 5.05%;
+        margin-top: 5.06%;
         overflow: hidden;
 
         > img {
@@ -560,6 +561,7 @@ body::-webkit-scrollbar {
 @media (max-width: 650px) {
 
     #container {
+        grid-template-rows: 100svh repeat(10, auto);
 
         #about {
             min-height: 360px;
@@ -573,6 +575,11 @@ body::-webkit-scrollbar {
         #road {
             width: 90%;
             height: auto;
+            margin-bottom: 10%;
+        }
+
+        #road-text {
+            margin-bottom: 10%;
         }
 
         .panels {
@@ -620,14 +627,17 @@ body::-webkit-scrollbar {
         }
         
         #what-i-like {
+            width: 90%;
 
             .method-text-last {
                 font-size: 21px;
+                width: 85%;
             }
         }
 
         .contact {
             font-size: 21px;
+            width: 85%;
         }
     }
 }
