@@ -271,7 +271,6 @@ body::-webkit-scrollbar {
 
         > a {
             width: 50%;
-            min-width: 400px;
             aspect-ratio: 475/298;
             box-shadow: var(--shadow);
             background-size: contain;
@@ -409,7 +408,6 @@ body::-webkit-scrollbar {
         > img {
             max-width: 400px;
             width: 50%;
-            min-width: 300px;
             padding: 10px 50px;
         }
     }
@@ -419,8 +417,7 @@ body::-webkit-scrollbar {
         height: auto;
 
         > img {
-            max-width: 50%;
-            min-width: 250px;
+            width: 50%;
         }
     }
 
@@ -438,6 +435,7 @@ body::-webkit-scrollbar {
     
         .method-text-last {
             width: fit-content;
+            max-width: 500px;
             display: block;
             margin: auto;
             margin-bottom: 50px;
@@ -476,9 +474,11 @@ body::-webkit-scrollbar {
 
     #container {
         
+        #about {
 
-        .about-text {
-            font-size: 21px;
+            .about-text {
+                font-size: 21px;
+            }
         }
 
         #road {
@@ -492,11 +492,12 @@ body::-webkit-scrollbar {
 
         .panels {
             width: 80%;
+            flex-direction: column;
         }
 
         .projects {
             > a {
-                width: 70%;
+                width: 90%;
             }
             > a:hover {
                 filter: none;
@@ -521,17 +522,24 @@ body::-webkit-scrollbar {
             gap: 20px;
             height: auto;
             margin: 10% 0;
+
+            .method-text {
+                font-size: 25px;
+                width: 90%;
+            }
         }
 
-        .method-text {
-            font-size: 25px;
-            min-width: 100%;
-        }
 
         .method1 {    
             > img {
                 max-width: 400px;
-                width: 50%;
+                width: 80%;
+                min-width: 0;
+            }
+        }
+        .method3 {    
+            > img {
+                width: 80%;
             }
         }
 
@@ -545,6 +553,81 @@ body::-webkit-scrollbar {
 
         .contact {
             font-size: 25px;
+        }
+    }
+}
+    
+@media (max-width: 650px) {
+
+    #container {
+
+        #about {
+            min-height: 360px;
+
+            .about-text {
+                font-size: 19px;
+                width: 80%;
+            }
+        }
+
+        #road {
+            width: 90%;
+            height: auto;
+        }
+
+        .panels {
+            width: 85%;
+        }
+
+        .projects {
+            padding: 30px 20px;
+
+            .projects-description {
+    
+                > a {
+                    margin-bottom: 21px;
+                    font-size: 21px;
+                }
+    
+                .projects-description-text {
+                    font-size: 19px;
+                }
+            }
+        }
+
+        .method {
+            padding: 40px 20px;
+
+            .method-text {
+                font-size: 21px;
+                padding: 0;
+                width: 90%;
+            }
+        }
+
+        .method1 {
+            > img {
+                padding: 0;
+                width: 85%;
+            }
+        }
+
+        .method2 {
+            > img {
+                width: 80%;
+                padding: 0;
+            }
+        }
+        
+        #what-i-like {
+
+            .method-text-last {
+                font-size: 21px;
+            }
+        }
+
+        .contact {
+            font-size: 21px;
         }
     }
 }
