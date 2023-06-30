@@ -258,6 +258,11 @@ body::-webkit-scrollbar {
         grid-column: 1/2;
         grid-row: 2/3;
         width: 80%;
+        aspect-ratio: 1527/86;
+        background-image: url(materials/road-text.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
         margin-bottom: 6%;
         opacity: 0;
         transition: 2s 0.3s;
@@ -586,6 +591,8 @@ body::-webkit-scrollbar {
 
         #road-text {
             margin-bottom: 10%;
+            aspect-ratio: 938/199;
+            background-image: url(materials/road-text2.png);
         }
 
         .panels {

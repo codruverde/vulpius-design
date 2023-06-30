@@ -60,7 +60,6 @@ const checkbox = document.getElementById('gekko');
     const scrollPosition2 = element2.offsetTop + (element2.offsetHeight / 2);
     const scrollPosition3 = element4.offsetTop + (element4.offsetHeight / 2);
     const scrollPosition4 = element5.offsetTop - (viewportHeight / 3);
-    // const scrollPosition5 = 1 * bodyHeight;
 
       if (scrollY <= scrollPosition1) {
         rect1.style.transform = "translate(0)";
@@ -72,6 +71,7 @@ const checkbox = document.getElementById('gekko');
         rect2.style.transform = "translate(3px)";
         rect3.style.transform = "translate(3px)";
         rect4.style.transform = "translate(3px)";
+        roadtext.style.opacity = "1";
       } else if (scrollY <= scrollPosition3) {
         rect1.style.transform = "translate(3px)";
         rect2.style.transform = "translate(0)";
@@ -83,6 +83,8 @@ const checkbox = document.getElementById('gekko');
         rect2.style.transform = "translate(3px)";
         rect3.style.transform = "translate(0)";
         rect4.style.transform = "translate(3px)";
+        ultrawide.style.transform = "translate(0)";
+        mobile.style.transform = "translate(0)";
       } else {
         rect1.style.transform = "translate(3px)";
         rect2.style.transform = "translate(3px)";
