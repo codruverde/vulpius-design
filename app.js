@@ -59,7 +59,7 @@ const checkbox = document.getElementById('gekko');
     const scrollPosition1 = viewportHeight * 0.6;
     const scrollPosition2 = element2.offsetTop + (element2.offsetHeight / 2);
     const scrollPosition3 = element4.offsetTop + (element4.offsetHeight / 2);
-    const scrollPosition4 = element5.offsetTop - (viewportHeight / 3);
+    const scrollPosition4 = element5.offsetTop - (viewportHeight / 2);
 
       if (scrollY <= scrollPosition1) {
         rect1.style.transform = "translate(0)";

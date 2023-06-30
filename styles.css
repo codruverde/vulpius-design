@@ -432,11 +432,10 @@ body::-webkit-scrollbar {
         grid-column: 1/2;
         width: 60%;
         padding: 50px 0;
-        /* margin-top: 5%; */
         
         #grid {
             width: 100%;
-            transform: translateX(-3%);
+            transform: translateX(-2%);
         }
     
         .method-text-last {
@@ -612,6 +611,17 @@ body::-webkit-scrollbar {
                 .projects-description-text {
                     font-size: 19px;
                 }
+            }
+        }
+
+        #ultrawide {
+            > img {
+                transition: 1s cubic-bezier(0.34, 0.17, 0.22, 0.98);
+            }
+        }
+        #mobile-image {
+            > img {
+                transition: 1s cubic-bezier(0.34, 0.17, 0.22, 0.98);
             }
         }
 
