@@ -326,6 +326,7 @@ body::-webkit-scrollbar {
             background-color: white;
             border: none;
             appearance: none;
+            outline: none;
             cursor: pointer;
             opacity: 0.9;
             padding: 5px;
@@ -538,6 +539,10 @@ body::-webkit-scrollbar {
         }
 
         #menu .rect:focus ~ .menu-links {
+            transform: translate(0);
+        }
+
+        &:focus .menu-links {
             transform: translate(0);
         }
 
