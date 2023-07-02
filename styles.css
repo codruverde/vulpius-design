@@ -318,7 +318,7 @@ body::-webkit-scrollbar {
         width: 80%;
         max-width: 500px;
         margin: auto;
-        border: 2px solid var(--main);
+        border: 3px solid var(--main);
         z-index: 3;
 
         #close-modal {
@@ -328,7 +328,7 @@ body::-webkit-scrollbar {
             appearance: none;
             outline: none;
             cursor: pointer;
-            opacity: 0.9;
+            /* opacity: 0.9; */
             padding: 5px;
             margin-left: calc(100% - 50px);
         }
@@ -341,9 +341,13 @@ body::-webkit-scrollbar {
             max-width: 400px;
             margin: auto;
             margin-bottom: 50px;
-            font-size: 19px;
+            font-size: 21px;
+            font-weight: 400;
             color: var(--main);
         }
+    }
+    #modal::backdrop {
+        background-color: rgba(0, 0, 0, 0.641);
     }
 
     .projects-description {
