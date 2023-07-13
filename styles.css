@@ -276,6 +276,53 @@ body::-webkit-scrollbar {
         transition: 2s 0.3s;
     }
 
+    #icons-container {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        align-self: start;
+        width: 90%;
+        max-width: 800px;
+        display: flex;
+        /* gap: 30px; */
+        justify-content: space-between;
+        opacity: 0;
+        transform: translateY(-90%);
+        transition: 2s;
+
+        .icons {
+            width: 10%;
+            max-width: 65px;
+            height: auto;
+            transition: 1.6s;
+            flex-shrink: 1;
+        }
+
+        & :nth-child(1) {
+            transform: translateY(100%);
+        }
+        & :nth-child(9) {
+            transform: translateY(100%);
+        }
+        & :nth-child(2) {
+            transform: translateY(75%);
+        }
+        & :nth-child(8) {
+            transform: translateY(75%);
+        }
+        & :nth-child(3) {
+            transform: translateY(50%);
+        }
+        & :nth-child(7) {
+            transform: translateY(50%);
+        }
+        & :nth-child(4) {
+            transform: translateY(25%);
+        }
+        & :nth-child(6) {
+            transform: translateY(25%);
+        }
+    }
+
     .projects {
         padding: 70px 50px;
         margin: 6% 0;

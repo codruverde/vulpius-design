@@ -57,6 +57,8 @@ const checkbox = document.getElementById('gekko');
   const rect2 = document.querySelector('.rect2');
   const rect3 = document.querySelector('.rect3');
   const rect4 = document.querySelector('.rect4');
+  const icons = document.getElementById('icons-container');
+  const childElements = document.getElementsByClassName('icons');
   const roadtext = document.getElementById('road-text');
   const ultrawide = document.getElementById("ultrawide").firstChild;
   const mobile = document.getElementById("mobile-image").firstChild;
@@ -84,6 +86,12 @@ const checkbox = document.getElementById('gekko');
         rect3.style.transform = "translate(3px)";
         rect4.style.transform = "translate(3px)";
         roadtext.style.opacity = "1";
+        icons.style.opacity = "0.8";
+        for (let i = 0; i < childElements.length; i++) {
+          const child = childElements[i];
+          // Modify the style properties of each child element
+          child.style.transform = "translate(0)";
+        }
       } else if (scrollY <= scrollPosition3) {
         rect1.style.transform = "translate(3px)";
         rect2.style.transform = "translate(0)";
