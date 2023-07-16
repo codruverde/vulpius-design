@@ -258,6 +258,7 @@ body::-webkit-scrollbar {
         width: auto;
         height: 80vh;
         margin-bottom: 5%;
+        transform: translateY(20px);
         opacity: 0.8;
         z-index: -1;
     }
@@ -272,6 +273,7 @@ body::-webkit-scrollbar {
         background-position: center;
         background-repeat: no-repeat;
         margin-bottom: 6%;
+        transform: translateY(20px);
         opacity: 0;
         transition: 2s 0.3s;
     }
@@ -286,7 +288,6 @@ body::-webkit-scrollbar {
         /* gap: 30px; */
         justify-content: space-between;
         opacity: 0;
-        transform: translateY(-90%);
         transition: 2s;
 
         .icons {
