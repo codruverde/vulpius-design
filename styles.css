@@ -292,7 +292,7 @@ body::-webkit-scrollbar {
 
         .icons {
             width: 10%;
-            max-width: 65px;
+            max-width: 60px;
             height: auto;
             transition: 1.6s;
             flex-shrink: 1;
