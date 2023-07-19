@@ -532,6 +532,7 @@ body::-webkit-scrollbar {
         grid-row: 10/11;
         grid-column: 1/2;
         width: 60%;
+        max-width: 1289px;
         padding: 50px 0;
         
         #grid {
