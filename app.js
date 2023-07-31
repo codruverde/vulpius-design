@@ -83,7 +83,7 @@ const checkbox = document.getElementById('gekko');
         rect3.style.transform = "translate(3px)";
         rect4.style.transform = "translate(3px)";
 
-        link1.style.animation = "pullout 5s";
+        link1.style.animation = "pullout 3s";
         link2.style.animation = "none";
         link3.style.animation = "none";
         link4.style.animation = "none";
@@ -93,7 +93,7 @@ const checkbox = document.getElementById('gekko');
         rect3.style.transform = "translate(3px)";
         rect4.style.transform = "translate(3px)";
 
-        link1.style.animation = "pullout 5s";
+        link1.style.animation = "pullout 3s";
         link2.style.animation = "none";
         link3.style.animation = "none";
         link4.style.animation = "none";
@@ -112,7 +112,7 @@ const checkbox = document.getElementById('gekko');
         rect4.style.transform = "translate(3px)";
 
         link1.style.animation = "none";
-        link2.style.animation = "pullout 5s";
+        link2.style.animation = "pullout 3s";
         link3.style.animation = "none";
         link4.style.animation = "none";
       } 
@@ -124,7 +124,7 @@ const checkbox = document.getElementById('gekko');
 
         link1.style.animation = "none";
         link2.style.animation = "none";
-        link3.style.animation = "pullout 5s";
+        link3.style.animation = "pullout 3s";
         link4.style.animation = "none";
 
         ultrawide.style.transform = "translate(0)";
@@ -138,7 +138,7 @@ const checkbox = document.getElementById('gekko');
         link1.style.animation = "none";
         link2.style.animation = "none";
         link3.style.animation = "none";
-        link4.style.animation = "pullout 5s";
+        link4.style.animation = "pullout 3s";
       }
   });
 
