@@ -374,7 +374,7 @@ body::-webkit-scrollbar {
         width: 80%;
         max-width: 600px;
         margin: auto;
-        border: 3px solid var(--main);
+        border: none;
         z-index: 3;
 
         #close-modal {
@@ -400,6 +400,20 @@ body::-webkit-scrollbar {
             font-size: 21px;
             font-weight: 400;
             color: var(--main);
+        }
+
+        #modal-images {
+            display: flex;
+            margin: auto;
+            margin-bottom: 5%;
+            gap: 5%;
+            width: 90%;
+            height: auto;
+
+            & img {
+                width: calc(50% - 5% / 2);
+                height: auto;
+            }
         }
     }
     #modal::backdrop {
