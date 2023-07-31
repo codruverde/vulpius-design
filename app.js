@@ -40,8 +40,10 @@ const checkbox = document.getElementById('gekko');
     });
 
 
-  const link1 = document.querySelector('.link1');
-  const link4 = document.querySelector('.link4');
+  const link1 = document.getElementById('link1');
+  const link2 = document.getElementById('link2');
+  const link3 = document.getElementById('link3');
+  const link4 = document.getElementById('link4');
 
   link1.addEventListener('click', (event) => {
     event.preventDefault();
@@ -80,11 +82,22 @@ const checkbox = document.getElementById('gekko');
         rect2.style.transform = "translate(3px)";
         rect3.style.transform = "translate(3px)";
         rect4.style.transform = "translate(3px)";
+
+        link1.style.animation = "pullout 5s";
+        link2.style.animation = "none";
+        link3.style.animation = "none";
+        link4.style.animation = "none";
       } else if (scrollY <= scrollPosition2) {
         rect1.style.transform = "translate(0)";
         rect2.style.transform = "translate(3px)";
         rect3.style.transform = "translate(3px)";
         rect4.style.transform = "translate(3px)";
+
+        link1.style.animation = "pullout 5s";
+        link2.style.animation = "none";
+        link3.style.animation = "none";
+        link4.style.animation = "none";
+
         roadtext.style.opacity = "1";
         icons.style.opacity = "0.8";
         for (let i = 0; i < childElements.length; i++) {
@@ -97,12 +110,23 @@ const checkbox = document.getElementById('gekko');
         rect2.style.transform = "translate(0)";
         rect3.style.transform = "translate(3px)";
         rect4.style.transform = "translate(3px)";
+
+        link1.style.animation = "none";
+        link2.style.animation = "pullout 5s";
+        link3.style.animation = "none";
+        link4.style.animation = "none";
       } 
       else if (scrollY <= scrollPosition4) {
         rect1.style.transform = "translate(3px)";
         rect2.style.transform = "translate(3px)";
         rect3.style.transform = "translate(0)";
         rect4.style.transform = "translate(3px)";
+
+        link1.style.animation = "none";
+        link2.style.animation = "none";
+        link3.style.animation = "pullout 5s";
+        link4.style.animation = "none";
+
         ultrawide.style.transform = "translate(0)";
         mobile.style.transform = "translate(0)";
       } else {
@@ -110,6 +134,11 @@ const checkbox = document.getElementById('gekko');
         rect2.style.transform = "translate(3px)";
         rect3.style.transform = "translate(3px)";
         rect4.style.transform = "translate(0)";
+
+        link1.style.animation = "none";
+        link2.style.animation = "none";
+        link3.style.animation = "none";
+        link4.style.animation = "pullout 5s";
       }
   });
 

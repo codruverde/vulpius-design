@@ -204,16 +204,16 @@ body::-webkit-scrollbar {
             transition: 0.6s;
             z-index: -1;
         }
-        .link1 {
+        #link1 {
             grid-row: 1/2;
         }
-        .link2 {
+        #link2 {
             grid-row: 2/3;
         }
-        .link3 {
+        #link3 {
             grid-row: 3/4;
         }
-        .link4 {
+        #link4 {
             grid-row: 4/5;
         }
     }
