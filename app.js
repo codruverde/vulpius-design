@@ -142,6 +142,9 @@ const checkbox = document.getElementById('gekko');
       }
   });
 
+
+function newFunction() {
   if (history.scrollRestoration) {
     history.scrollRestoration = "manual";
   };
+}
