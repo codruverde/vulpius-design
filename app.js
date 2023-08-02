@@ -144,6 +144,6 @@ const checkbox = document.getElementById('gekko');
 
 
 
-  if (history.scrollRestoration) {
-    history.scrollRestoration = "manual";
-  };
+  // if (history.scrollRestoration) {
+  //   history.scrollRestoration = "manual";
+  // };
