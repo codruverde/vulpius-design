@@ -68,7 +68,7 @@ const checkbox = document.getElementById('gekko');
   window.addEventListener('scroll', () => {
     const element2 = document.getElementById('road');
     const element3 = document.getElementById('flexible-design');
-    const element4 = document.getElementById('project3');
+    const element4 = document.getElementById('project4');
     const element5 = document.getElementById('grid');
 
     const scrollY = window.scrollY;

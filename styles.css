@@ -132,7 +132,7 @@ body::-webkit-scrollbar {
     max-width: 1920px;
     margin: auto;
     display: grid;
-    grid-template-rows: 100vh repeat(10, auto);
+    grid-template-rows: 100vh repeat(11, auto);
     grid-template-columns: 100%;
     place-items: center;  
 
@@ -357,11 +357,19 @@ body::-webkit-scrollbar {
         grid-row: 4/5;
 
         > a {
-            background-image: url(materials/composer.jpg);
+            background-image: url(materials/scoala.jpg);
         }
     }
-    #project3 {
+    .project3 {
         grid-row: 5/6;
+
+        > a {
+            background-image: url(materials/composer.jpg);
+            cursor: pointer;
+        }
+    }
+    #project4 {
+        grid-row: 6/7;
 
         > a {
             background-image: url(materials/DC.jpg);
@@ -371,7 +379,7 @@ body::-webkit-scrollbar {
 
     #modal {
         grid-column: 1/2;
-        grid-row: 5/6;
+        grid-row: 7/8;
         width: 80%;
         max-width: 600px;
         margin: auto;
@@ -449,14 +457,14 @@ body::-webkit-scrollbar {
 
     #flexible-design {
         grid-column: 1/2;
-        grid-row: 6/7;
+        grid-row: 7/8;
         width: 90%;
         margin-top: 5%;
     }
 
     #ultrawide {
         grid-column: 1/2;
-        grid-row: 6/7;
+        grid-row: 7/8;
         width: 78.38%;
         aspect-ratio: 71/20;
         margin-top: 5.2%;
@@ -471,7 +479,7 @@ body::-webkit-scrollbar {
 
     #mobile {
         grid-column: 1/2;
-        grid-row: 6/7;
+        grid-row: 7/8;
         width: 9.703%;
         margin-top: 27%;
         justify-self: end;
@@ -481,7 +489,7 @@ body::-webkit-scrollbar {
 
     #mobile-image {
         grid-column: 1/2;
-        grid-row: 6/7;
+        grid-row: 7/8;
         width: 8.8%;
         border-radius: 4%;
         aspect-ratio: 365/753;
@@ -516,7 +524,7 @@ body::-webkit-scrollbar {
         }
     }
     .method1 {
-        grid-row: 7/8;
+        grid-row: 8/9;
 
         > img {
             max-width: 430px;
@@ -525,7 +533,7 @@ body::-webkit-scrollbar {
         }
     }
     .method2 {
-        grid-row: 8/9;
+        grid-row: 9/10;
 
         > img {
             max-width: 400px;
@@ -534,7 +542,7 @@ body::-webkit-scrollbar {
         }
     }
     .method3 {
-        grid-row: 9/10;
+        grid-row: 10/11;
         justify-content: space-evenly;
         height: auto;
 
@@ -544,7 +552,7 @@ body::-webkit-scrollbar {
     }
 
     #what-i-like {
-        grid-row: 10/11;
+        grid-row: 11/12;
         grid-column: 1/2;
         width: 60%;
         max-width: 1289px;
@@ -567,7 +575,7 @@ body::-webkit-scrollbar {
     }
 
     .contact {
-        grid-row: 11/12;
+        grid-row: 12/13;
         grid-column: 1/2;
         width: 70%;
         font-weight: 400;
@@ -694,7 +702,7 @@ body::-webkit-scrollbar {
 @media (max-width: 650px) {
 
     #container {
-        grid-template-rows: 100svh repeat(10, auto);
+        grid-template-rows: 100svh repeat(11, auto);
 
         #about {
             min-height: 360px;
