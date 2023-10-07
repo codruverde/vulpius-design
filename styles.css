@@ -240,6 +240,7 @@ body::-webkit-scrollbar {
         max-width: 900px;
         min-height: 410px;
         height: auto;
+        max-height: 90sh;
         box-shadow: none;
         transition: 1s;
 
@@ -605,9 +606,17 @@ body::-webkit-scrollbar {
     #container {
         
         #about {
+            min-height: 330px;
 
             .about-text {
                 font-size: 21px;
+            }
+        }
+
+        #icons-container {
+
+            .icons {
+                max-width: 50px;
             }
         }
 
@@ -705,7 +714,6 @@ body::-webkit-scrollbar {
         grid-template-rows: 100svh repeat(11, auto);
 
         #about {
-            min-height: 360px;
 
             .about-text {
                 font-size: 19px;
