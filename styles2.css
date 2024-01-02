@@ -76,22 +76,22 @@ body {
         }
 
         #infografik {
-            margin-top: 100px;
+            margin-top: 10vh;
         }
         #infografik-label {
-            margin-top: 96px;
+            margin-top: 9.5vh;
         }
         #ankunft {
-            margin-top: 155px;
+            margin-top: 18vh;
         }
         #ankunft-label {
-            margin-top: 151px;
+            margin-top: 17.5vh;
         }
         #japan {
-            margin-top: 230px;
+            margin-top: 28vh;
         }
         #japan-label {
-            margin-top: 226px;
+            margin-top: 27.5vh;
         }
 
         & input:checked {
