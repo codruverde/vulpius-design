@@ -1,0 +1,489 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+    --transition: 0.5s;
+}
+
+@keyframes moving {
+    0% {transform: translateX(0), rotate(-45deg);}
+    2% {transform:  translateX(2vh), rotate(0);}
+    10% {transform: translateX(10vh);}
+    30% {transform: translateX(10vh);}
+    100% {transform: translateX(-6vh);}
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+@keyframes go {
+    to {
+       transform: translateX(-16vh); 
+    }
+}
+
+@keyframes dash1 {
+    to {
+        stroke-dasharray: 154;
+    }
+}
+@keyframes dash2 {
+    to {
+        stroke-dasharray: 180;
+    }
+}
+@keyframes dash3 {
+    to {
+        stroke-dasharray: 200;
+    }
+}
+
+
+body {
+    background: #1a1a1a;
+    overflow-y: hidden;
+
+    #bigger {
+        margin: auto;
+        max-width: 1920px;
+
+        & input[type=checkbox] {
+            position: fixed;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            margin-left: 20px;
+            border: 3px solid white;
+            mix-blend-mode: difference;
+            cursor: pointer;
+            user-select: none;
+            z-index: 2;
+        }
+        & label {
+            user-select: none;
+        }
+
+        #infografik {
+            margin-top: 100px;
+        }
+        #infografik-label {
+            margin-top: 96px;
+        }
+        #ankunft {
+            margin-top: 155px;
+        }
+        #ankunft-label {
+            margin-top: 151px;
+        }
+        #japan {
+            margin-top: 230px;
+        }
+        #japan-label {
+            margin-top: 226px;
+        }
+
+        & input:checked {
+            background: #0081C9;
+        }    
+
+        & label {
+            position: fixed;
+            font-family: 'Inter';
+            color: white;
+            mix-blend-mode: difference;
+            font-size: 20px;
+            margin-left: 43px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        #credits {
+            position: fixed;
+            margin-left: 20px;
+            margin-top: 90vh;
+            color: white;
+            font-family: 'Inter';
+            text-decoration: none;
+        }
+
+        /* JAVASCRIPT DESTROYER */
+
+        #infografik:checked ~ :is(#ankunft, #ankunft-label) {
+            display: none;
+        }
+
+        #infografik:checked ~ #container {
+            background-image: url(materials/Werbung.svg);
+        }
+        #infografik:checked ~ #container > *:not(.line, .indication-title1, .min) {
+            display: none;
+        }
+        #infografik:checked ~ #container .indication-title {
+            margin-top: 81vh;
+            margin-left: 20vh;
+            mix-blend-mode: normal;
+        }
+        #infografik:checked ~ #container .line {
+            margin-left: 145.7vh;
+            margin-top: 32vh;
+            font-size: 5.9vh;
+            font-weight: 400;
+            position: relative;
+        }
+        #infografik:checked ~ #container .min {
+            margin-top: 51vh;
+            margin-left: 3vh;
+            color: white;
+        }
+
+        #japan:checked ~ #container .line span:nth-of-type(2n + 3) {
+            visibility: visible;
+            font-size: 5.2vh;
+        }
+        #japan:checked ~ #container .line span:is(:nth-of-type(2n + 2), span:first-of-type) {
+            visibility: hidden;
+            font-size: 0;
+        }
+        #japan:checked ~ #container .line {
+            transform: translateX(-1vh);
+        }
+        #japan:checked ~ #container :is(.indication-title1 span:nth-of-type(even), .indication-title2 span:nth-of-type(even), .destination span:nth-of-type(even), .indications span:nth-of-type(even), .min span:nth-of-type(even)) {
+            visibility: hidden;
+            font-size: 0;
+        }
+        #japan:checked ~ #container :is(.indication-title1 span:nth-of-type(odd), .indication-title2 span:nth-of-type(odd)) {
+            visibility: visible;
+            font-size: 7vh;
+        }
+        #japan:checked ~ #container .destination span:nth-of-type(odd) {
+            visibility: visible;
+            font-size: 4.5vh;
+            font-weight: 550;
+        }
+        #japan:checked ~ #container .indications span:nth-of-type(odd) {
+            visibility: visible;
+            font-size: 5.5vh;
+        }
+        #japan:checked ~ #container .min span:nth-of-type(odd) {
+            visibility: visible;
+            font-size: 4vh;
+        }
+        #japan:checked ~ #container .indication1 {
+            margin-top: 73.2vh;
+            margin-left: 51vh;
+        }
+        #japan:checked ~ #container .indication2 {
+            margin-left: 68.5vh;
+        }
+        #japan:checked ~ #container .indication3 {
+            margin-left: 86.7vh;
+        }
+        #japan:checked ~ #container .indication4 {
+            margin-left: 104.7vh;
+        }
+        #japan:checked ~ #container .min {
+            transform: translateY(-1vh);
+        }
+
+        #ankunft:checked ~ #container :is(.min, .circles div:nth-of-type(n + 2), .indication2, .indication3, .indication4) {
+            display: none;
+        }
+        #ankunft:checked ~ #container .indication1 {
+            animation: moving 10s forwards;
+            margin-left: 52vh;
+        }
+        #ankunft:checked ~ #container .circles div:first-of-type {
+            animation: moving 10s forwards;
+            background: orange;
+            transition: 0.3s;
+            transition-delay: 9s;
+        }
+        #ankunft:checked ~ #container #grafik img {
+            transform: translateX(0);
+            transition: 7s;
+            transition-delay: 3s;
+        }
+        #ankunft:checked ~ #container :is(#brown, #red, #blue) {
+            display: block;
+            animation: go 7s 3s forwards;
+        }
+        #ankunft:checked ~ #container #U6 {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s;
+            transition-delay: 1.2s;
+            animation: go 7s 3s forwards;
+        }
+        #ankunft:checked ~ #container .red {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s;
+            transition-delay: 1.4s;
+            animation: go 7s 3s forwards;
+        }
+        #ankunft:checked ~ #container .blue {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s;
+            transition-delay: 1.6s;
+            animation: go 7s 3s forwards;
+        }
+        #ankunft:checked ~ #container #brown .brown-path {
+            animation-name: dash, dash1;
+            animation-duration: 1.2s, 4s;
+            animation-delay: 0s, 3s;
+            animation-fill-mode: forwards, forwards;
+        }
+        #ankunft:checked ~ #container #red .red-path {
+            animation-name: dash, dash2;
+            animation-duration: 1.2s, 6s;
+            animation-delay: 0s, 3s;
+            animation-fill-mode: forwards, forwards;
+        }
+        #ankunft:checked ~ #container #blue .blue-path {
+            animation-name: dash, dash3;
+            animation-duration: 1.2s, 4.3s;
+            animation-delay: 0s, 3s;
+            animation-fill-mode: forwards, forwards;
+        }
+
+        /* Container */
+
+        #container {
+            aspect-ratio: 1.6;
+            height: 100vh;
+            float: right;
+            margin-right: 50px;
+            background-image: url(materials/Background.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: var(--transition);
+            overflow: hidden;
+
+            & > * {
+                position: fixed;
+            }
+
+            .text {
+                font-family: 'Inter';
+                user-select: none;
+            }
+
+            #grafik {
+                height: 17.7vh;
+                width: 80vh;
+                margin-top: 82.3vh;
+                overflow: hidden;
+
+                & img {
+                    height: 100%;
+                    transform: translateX(-11vh);
+                }
+            }
+
+            /* The Key */
+
+            & span {
+                transition: 90ms;
+                transition-delay: calc(var(--order) * 90ms);
+            }
+
+            /* The Key */
+
+            .line {
+                color: white;
+                font-weight: 350;
+                font-size: 6.9vh;
+                margin-top: 75.9vh;
+                margin-left: 2.9vh;
+                text-align: center;
+                text-wrap: nowrap;
+                transform-origin: center;
+
+                & span:nth-of-type(2n + 3) {
+                    visibility: hidden;
+                    font-size: 0;
+                }
+            }
+
+            .indication-title {
+                margin-left: 10.8vh;
+                margin-top: 2.7vh;
+                width: max-content;
+                font-size: 7.95vh;
+                font-weight: 500;
+                color: white;
+
+                & span:nth-of-type(odd) {
+                    visibility: hidden;
+                    font-size: 0;
+                }
+            }
+            .indication-title1 {
+                mix-blend-mode: difference;
+            }
+            .indication-title2 {
+                mix-blend-mode: color-dodge;
+            }
+
+            .destination {
+                margin-top: 90vh;
+                margin-left: 107vh;
+                width: 50vh;
+                font-size: 5vh;
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & span:nth-of-type(odd) {
+                    visibility: hidden;
+                    font-size: 0;
+                }
+
+                & img {
+                    height: 5vh;
+                    width: 5vh;
+                    margin-left: 2vh;
+                }
+            }
+
+            .circles {
+                display: flex;
+                height: fit-content;
+                margin-top: 81.3vh;
+                margin-left: 47vh;
+                gap: 13vh;
+                transition: var(--transition);
+
+                & div {
+                    width: 5vh;
+                    aspect-ratio: 1/1;
+                    border-radius: 100%;
+                    border: 0.9vh solid #323232;
+                    background: white;
+                    transition: var(--transition);
+                }
+            }
+
+            .indications {
+                font-size: 6vh;
+                text-align: center;
+                width: max-content;
+                transform: rotate(-45deg);
+                transform-origin: bottom left;
+
+                & span:nth-of-type(odd) {
+                    visibility: hidden;
+                    font-size: 0;
+                }
+            }
+            .indication1 {
+                margin-top: 73.6vh;
+                margin-left: 50vh;
+                transition: 0.5s;
+            }
+            .indication2 {
+                margin-top: 73.4vh;
+                margin-left: 68vh;
+            }
+            .indication3 {
+                margin-top: 73.2vh;
+                margin-left: 86vh;
+            }
+            .indication4 {
+                margin-top: 73.4vh;
+                margin-left: 104vh;
+            }
+
+            .min {
+                font-size: 4vh;
+                font-weight: 500;
+                margin-top: 79vh;
+                margin-left: 34vh;
+
+                & span:nth-of-type(odd) {
+                    visibility: hidden;
+                    font-size: 0;
+                }
+            }
+
+            #brown {
+                width: 20vh;
+                margin-top: 69.5vh;
+                margin-left: 48vh;
+                display: none;
+            }
+            #red {
+                width: 0.6vh;
+                margin-top: 60vh;
+                margin-left: 58.5vh;
+                display: none;
+            }
+            #blue {
+                width: 13vh;
+                margin-top: 60vh;
+                margin-left: 56vh;
+                display: none;
+            }
+            #U6 {
+                width: 7vh;
+                margin-top: 66vh;
+                margin-left: 42vh;
+                visibility: hidden;
+                opacity: 0;
+            }
+            .red {
+                font-size: 6vh;
+                font-weight: 500;
+                color: #E3000F;
+                margin-top: 55vh;
+                margin-left: 56.7vh;
+                visibility: hidden;
+                opacity: 0;
+            }
+            .blue {
+                font-size: 6vh;
+                font-weight: 500;
+                color: #032960;
+                margin-top: 55vh;
+                margin-left: 70vh;
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .brown-path {
+                stroke-dasharray: 254;
+                stroke-dashoffset: -254;
+            }
+            .red-path {
+                stroke-dasharray: 260;
+                stroke-dashoffset: -260;
+            }
+            .blue-path {
+                stroke-dasharray: 350;
+                stroke-dashoffset: -400;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+        #container {
+            margin-right: 0;
+        }
+    }
+}

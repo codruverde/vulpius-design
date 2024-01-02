@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-4">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wiener Linien Strassenbahn Infoscreen">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Strassenbahn Infoscreen</title>
+</head>
+<body>
+    <div id="bigger">
+        <input type="checkbox" name="Infografik" id="infografik"> 
+        <label id="infografik-label" for="infografik">Werbung</label>
+        <input type="checkbox" name="ankunft" id="ankunft"> 
+        <label id="ankunft-label" for="ankunft">Ankunft<br>10 sec</label>
+        <input type="checkbox" name="Japan" id="japan"> 
+        <label id="japan-label" for="japan">Japanisch</label>
+        <a id="credits" href="https://vulpdesign.com" target="_blank">vulpdesign.com<br>[pure CSS]</a>
+        <div id="container">
+            <div class="text indication-title indication-title1"><span>ヨ</span><span>Jo</span><span style="--order: 4;">ハ</span><span style="--order: 4;">ha</span><span style="--order: 2;">ン</span><span style="--order: 2;">nn</span><span style="--order: 5;">・</span><span style="--order: 5;">-</span><span style="--order: 1;">ネ</span><span style="--order: 1;">Ne</span><span style="--order: 3;">ポ</span><span style="--order: 3;">po</span><span style="--order: 4;">ム</span><span style="--order: 4;">mu</span><span style="--order: 4;">ク</span><span style="--order: 4;">k</span><span style="--order: 3;">・</span><span style="--order: 3;">-</span><span style="--order: 1;">ベ</span><span style="--order: 1;">Be</span><span style="--order: 3;">ル</span><span style="--order: 3;">rg</span><span style="--order: 1;">ガ</span><span style="--order: 1;">er</span><span style="--order: 3;">ー</span><span style="--order: 3;">-</span><span style="--order: 5;">広</span><span style="--order: 5;">Pl</span><span style="--order: 4;">場</span><span style="--order: 4;">atz</span></div>
+            <div class="text indication-title indication-title2"><span>ヨ</span><span>Jo</span><span style="--order: 4;">ハ</span><span style="--order: 4;">ha</span><span style="--order: 2;">ン</span><span style="--order: 2;">nn</span><span style="--order: 5;">・</span><span style="--order: 5;">-</span><span style="--order: 1;">ネ</span><span style="--order: 1;">Ne</span><span style="--order: 3;">ポ</span></div>
+            <div class="text line"><span>L</span><span>i</span><span>ラ</span><span style="--order: 2;">n</span><span style="--order: 2;">イ</span><span style="--order: 2;">i</span><span style="--order: 1;">ン</span><span style="--order: 1;">e</span> 9</div>
+            <div class="text destination"><span>西</span><span>Westba</span><span style="--order: 1;">駅</span><span style="--order: 1;">hnhof</span><img src="materials/S-Bahn_Austria.svg" alt="S-Bahn_Austria"><img src="materials/U-Bahn_Wien.svg" alt="U-Bahn_Wien"></div>
+            <div class="text indications indication1"><span>ヨ</span><span>Jo</span><span style="--order: 4;">ハ</span><span style="--order: 4;">han</span><span style="--order: 2;">ン</span><span style="--order: 2;">n-</span><span style="--order: 5;">・</span><span style="--order: 5;">N.-</span><span style="--order: 1;">ベ</span><span style="--order: 1;">Be</span><span style="--order: 3;">ル</span><span style="--order: 3;">rg</span><span style="--order: 1;">ガ</span><span style="--order: 1;">er</span><span style="--order: 3;">ー</span><span style="--order: 3;">-</span><span style="--order: 5;">広</span><span style="--order: 5;">Pl</span><span style="--order: 2;">場</span><span style="--order: 2;">atz</span></div>
+            <div class="text indications indication2"><span>フ</span><span>Fe</span><span style="--order: 4;">ェ</span><span style="--order: 4;">ß</span><span style="--order: 2;">ス</span><span style="--order: 2;">tg</span><span style="--order: 3;">通</span><span style="--order: 3;">as</span><span style="--order: 1;">り</span><span style="--order: 1;">se</span></div>
+            <div class="text indications indication3"><span>パ</span><span>Pa</span><span style="--order: 4;">ニ</span><span style="--order: 4;">ni</span><span style="--order: 2;">ケ</span><span style="--order: 2;">ke</span><span style="--order: 3;">ン</span><span style="--order: 3;">ng</span><span style="--order: 1;">通</span><span style="--order: 1;">as</span><span style="--order: 5;">り</span><span style="--order: 5;">se</span></div>
+            <div class="text indications indication4"><span>カ</span><span>Ca</span><span style="--order: 4;">ミ</span><span style="--order: 4;">mi</span><span style="--order: 2;">ロ</span><span style="--order: 2;">llo</span><span style="--order: 3;">・</span><span style="--order: 3;">-</span><span style="--order: 1;">ジ</span><span style="--order: 1;">Sit</span><span style="--order: 5;">ッ</span><span style="--order: 5;">te</span><span style="--order: 2;">テ</span><span style="--order: 2;">-G</span><span style="--order: 4;">通</span><span style="--order: 4;">as</span><span style="--order: 1;">り</span><span style="--order: 1;">se</span></div>
+            <div class="text min">3 <span>分</span><span>min</span></div>
+            <svg id="brown" width="187" height="188" viewBox="0 0 187 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="brown-path" d="M3.80859 4.23926L103.281 103.712L183.414 183.844" stroke="#9D6930" stroke-width="10"/>
+            </svg>
+            <svg id="red" width="6" height="260" viewBox="0 0 6 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="red-path" d="M3 0L3.00001 200L3.00001 260" stroke="#E3000F" stroke-width="5"/>
+            </svg>
+            <svg id="blue" width="124" height="304" viewBox="0 0 124 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="blue-path" d="M122 2L42 82V202.5V262L2 302" stroke="#032960" stroke-width="5"/>
+            </svg>
+            <img src="materials/U6.jpg" alt="U6" id="U6">
+            <div class="text red">2</div>
+            <div class="text blue">44</div>
+            <div id="grafik"><img src="materials/Straßenbahn Grafik.svg" alt="Straßenbahn Grafik"></div>
+            <div class="circles">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
