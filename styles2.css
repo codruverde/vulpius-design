@@ -56,7 +56,7 @@ body {
 
     #bigger {
         margin: auto;
-        height: 100sh;
+        height: 100svh;
         max-width: 1920px;
 
         & input[type=checkbox] {
