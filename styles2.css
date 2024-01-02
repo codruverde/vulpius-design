@@ -114,7 +114,7 @@ body {
             margin-top: 90vh;
             color: white;
             font-family: 'Inter';
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         /* JAVASCRIPT DESTROYER */
