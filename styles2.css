@@ -56,6 +56,7 @@ body {
 
     #bigger {
         margin: auto;
+        height: 100vh;
         max-width: 1920px;
 
         & input[type=checkbox] {
@@ -262,7 +263,7 @@ body {
 
         #container {
             aspect-ratio: 1.6;
-            height: 100vh;
+            height: 100%;
             float: right;
             margin-right: 50px;
             background-image: url(materials/Background.svg);
@@ -480,10 +481,13 @@ body {
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media only screen and (max-width: 1600px) {
     body {
-        #container {
-            margin-right: 0;
+        #bigger {
+
+            #container {
+                margin-right: 0;
+            }
         }
     }
 }
