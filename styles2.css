@@ -56,7 +56,7 @@ body {
 
     #bigger {
         margin: auto;
-        max-width: 1920px;
+        
 
         & input[type=checkbox] {
             position: fixed;
@@ -208,7 +208,7 @@ body {
             animation: moving 10s forwards;
             background: orange;
             transition: 0.3s;
-            transition-delay: 9s;
+            transition-delay: 8s;
         }
         #ankunft:checked ~ #container #grafik img {
             transform: translateX(0);
