@@ -54,217 +54,199 @@ body {
     background: #1a1a1a;
     overflow-y: hidden;
 
-    #bigger {
+    #bigmama {
         margin: auto;
+        width: calc(1.6 * 90vh);
         
+        #controls {
+            position: absolute;
+            width: calc(1.6 * 90vh);
+            margin-top: 93vh;
 
-        & input[type=checkbox] {
-            position: fixed;
-            appearance: none;
-            width: 16px;
-            height: 16px;
-            margin-left: 20px;
-            border: 3px solid white;
-            mix-blend-mode: difference;
-            cursor: pointer;
-            user-select: none;
-            z-index: 2;
+            & input[type=checkbox] {
+                appearance: none;
+                aspect-ratio: 1;
+                width: 2.5vh;
+                border: 0.5vh solid white;
+                mix-blend-mode: difference;
+                cursor: pointer;
+                user-select: none;
+                z-index: 2;
+            }
+            & label {
+                user-select: none;
+                font-family: 'Inter';
+                color: white;
+                mix-blend-mode: difference;
+                font-size: 3.1vh;
+                margin-left: 0.3vh;
+                cursor: pointer;
+                z-index: 2;
+            }
+            #ankunft {
+                margin-left: 4vh;
+            }
+            #japan {
+                margin-left: 4vh;
+            }
+            & input:checked {
+                background: #0081C9;
+            }    
+            #credits {
+                float: right;
+                color: white;
+                font-family: 'Inter';
+                text-decoration: underline;
+                font-size: 2vh;
+            }
+            #infografik:checked ~ :is(#ankunft, #ankunft-label) {
+                display: none;
+            }
         }
-        & label {
-            user-select: none;
-        }
-
-        #infografik {
-            margin-top: 100px;
-        }
-        #infografik-label {
-            margin-top: 96px;
-        }
-        #ankunft {
-            margin-top: 155px;
-        }
-        #ankunft-label {
-            margin-top: 151px;
-        }
-        #japan {
-            margin-top: 230px;
-        }
-        #japan-label {
-            margin-top: 226px;
-        }
-
-        & input:checked {
-            background: #0081C9;
-        }    
-
-        & label {
-            position: fixed;
-            font-family: 'Inter';
-            color: white;
-            mix-blend-mode: difference;
-            font-size: 20px;
-            margin-left: 43px;
-            cursor: pointer;
-            z-index: 2;
-        }
-
-        #credits {
-            position: fixed;
-            margin-left: 20px;
-            margin-top: 90vh;
-            color: white;
-            font-family: 'Inter';
-            text-decoration: underline;
-            font-size: 14px;
-        }
-
+        
+        
         /* JAVASCRIPT DESTROYER */
 
-        #infografik:checked ~ :is(#ankunft, #ankunft-label) {
-            display: none;
-        }
-
-        #infografik:checked ~ #container {
+        #controls:has(#infografik:checked) ~ #container {
             background-image: url(materials/Werbung.svg);
         }
-        #infografik:checked ~ #container > *:not(.line, .indication-title1, .min) {
+        #controls:has(#infografik:checked) ~ #container > *:not(.line, .indication-title1, .min) {
             display: none;
         }
-        #infografik:checked ~ #container .indication-title {
-            margin-top: 81vh;
-            margin-left: 20vh;
+        #controls:has(#infografik:checked) ~ #container .indication-title {
+            margin-top: calc(0.9 * 81vh);
+            margin-left: calc(0.9 * 20vh);
             mix-blend-mode: normal;
         }
-        #infografik:checked ~ #container .line {
-            margin-left: 145.7vh;
-            margin-top: 32vh;
-            font-size: 5.9vh;
+        #controls:has(#infografik:checked) ~ #container .line {
+            margin-left: calc(0.9 * 145.7vh);
+            margin-top: calc(0.9 * 32vh);
+            font-size: calc(0.9 * 5.9vh);
             font-weight: 400;
             position: relative;
         }
-        #infografik:checked ~ #container .min {
-            margin-top: 51vh;
-            margin-left: 3vh;
+        #controls:has(#infografik:checked) ~ #container .min {
+            margin-top: calc(0.9 * 51vh);
+            margin-left: calc(0.9 * 3vh);
             color: white;
         }
-
-        #japan:checked ~ #container .line span:nth-of-type(2n + 3) {
+        #controls:has(#japan:checked) ~ #container .line span:nth-of-type(2n + 3) {
             visibility: visible;
-            font-size: 5.2vh;
+            font-size: calc(0.9 * 5.2vh);
         }
-        #japan:checked ~ #container .line span:is(:nth-of-type(2n + 2), span:first-of-type) {
+        #controls:has(#japan:checked) ~ #container .line span:is(:nth-of-type(2n + 2), span:first-of-type) {
             visibility: hidden;
             font-size: 0;
         }
-        #japan:checked ~ #container .line {
-            transform: translateX(-1vh);
+        #controls:has(#japan:checked) ~ #container .line {
+            transform: translateX(-0.9vh);
         }
-        #japan:checked ~ #container :is(.indication-title1 span:nth-of-type(even), .indication-title2 span:nth-of-type(even), .destination span:nth-of-type(even), .indications span:nth-of-type(even), .min span:nth-of-type(even)) {
+        #controls:has(#japan:checked) ~ #container :is(.indication-title1 span:nth-of-type(even), .indication-title2 span:nth-of-type(even), .destination span:nth-of-type(even), .indications span:nth-of-type(even), .min span:nth-of-type(even)) {
             visibility: hidden;
             font-size: 0;
         }
-        #japan:checked ~ #container :is(.indication-title1 span:nth-of-type(odd), .indication-title2 span:nth-of-type(odd)) {
+        #controls:has(#japan:checked) ~ #container :is(.indication-title1 span:nth-of-type(odd), .indication-title2 span:nth-of-type(odd)) {
             visibility: visible;
-            font-size: 7vh;
+            font-size: calc(0.9 * 7vh);
         }
-        #japan:checked ~ #container .destination span:nth-of-type(odd) {
+        #controls:has(#japan:checked) ~ #container .destination span:nth-of-type(odd) {
             visibility: visible;
-            font-size: 4.5vh;
+            font-size: calc(0.9 * 4.5vh);
             font-weight: 550;
         }
-        #japan:checked ~ #container .indications span:nth-of-type(odd) {
+        #controls:has(#japan:checked) ~ #container .indications span:nth-of-type(odd) {
             visibility: visible;
-            font-size: 5.5vh;
+            font-size: calc(0.9 * 5.5vh);
         }
-        #japan:checked ~ #container .min span:nth-of-type(odd) {
+        #controls:has(#japan:checked) ~ #container .min span:nth-of-type(odd) {
             visibility: visible;
-            font-size: 4vh;
+            font-size: calc(0.9 * 4vh);
         }
-        #japan:checked ~ #container .indication1 {
-            margin-top: 73.2vh;
-            margin-left: 51vh;
+        #controls:has(#japan:checked) ~ #container .indication1 {
+            margin-top: calc(0.9 * 73.2vh);
+            margin-left: calc(0.9 * 51vh);
         }
-        #japan:checked ~ #container .indication2 {
-            margin-left: 68.5vh;
+        #controls:has(#japan:checked) ~ #container .indication2 {
+            margin-left: calc(0.9 * 68.5vh);
         }
-        #japan:checked ~ #container .indication3 {
-            margin-left: 86.7vh;
+        #controls:has(#japan:checked) ~ #container .indication3 {
+            margin-left: calc(0.9 * 86.7vh);
         }
-        #japan:checked ~ #container .indication4 {
-            margin-left: 104.7vh;
+        #controls:has(#japan:checked) ~ #container .indication4 {
+            margin-left: calc(0.9 * 104.7vh);
         }
-        #japan:checked ~ #container .min {
-            transform: translateY(-1vh);
+        #controls:has(#japan:checked) ~ #container .min {
+            transform: translateY(-0.9vh);
         }
-
-        #ankunft:checked ~ #container :is(.min, .circles div:nth-of-type(n + 2), .indication2, .indication3, .indication4) {
+        #controls:has(#ankunft:checked) ~ #container :is(.min, .circles div:nth-of-type(n + 2), .indication2, .indication3, .indication4) {
             display: none;
         }
-        #ankunft:checked ~ #container .indication1 {
+        #controls:has(#ankunft:checked) ~ #container .indication1 {
             animation: moving 10s forwards;
-            margin-left: 52vh;
+            margin-left: calc(0.9 * 52vh);
         }
-        #ankunft:checked ~ #container .circles div:first-of-type {
+        #controls:has(#ankunft:checked) ~ #container .circles div:first-of-type {
             animation: moving 10s forwards;
             background: orange;
             transition: 0.3s;
             transition-delay: 8s;
         }
-        #ankunft:checked ~ #container #grafik img {
+        #controls:has(#ankunft:checked) ~ #container #grafik img {
             transform: translateX(0);
             transition: 7s;
             transition-delay: 3s;
         }
-        #ankunft:checked ~ #container :is(#brown, #red, #blue) {
+        #controls:has(#ankunft:checked) ~ #container :is(#brown, #red, #blue) {
             display: block;
             animation: go 7s 3s forwards;
         }
-        #ankunft:checked ~ #container #U6 {
+        #controls:has(#ankunft:checked) ~ #container #U6 {
             visibility: visible;
             opacity: 1;
             transition: 0.3s;
             transition-delay: 1.2s;
             animation: go 7s 3s forwards;
         }
-        #ankunft:checked ~ #container .red {
+        #controls:has(#ankunft:checked) ~ #container .red {
             visibility: visible;
             opacity: 1;
             transition: 0.3s;
             transition-delay: 1.4s;
             animation: go 7s 3s forwards;
         }
-        #ankunft:checked ~ #container .blue {
+        #controls:has(#ankunft:checked) ~ #container .blue {
             visibility: visible;
             opacity: 1;
             transition: 0.3s;
             transition-delay: 1.6s;
             animation: go 7s 3s forwards;
         }
-        #ankunft:checked ~ #container #brown .brown-path {
+        #controls:has(#ankunft:checked) ~ #container #brown .brown-path {
             animation-name: dash, dash1;
-            animation-duration: 1.2s, 4s;
+            animation-duration: 1.2s, 5s;
             animation-delay: 0s, 3s;
             animation-fill-mode: forwards, forwards;
         }
-        #ankunft:checked ~ #container #red .red-path {
+        #controls:has(#ankunft:checked) ~ #container #red .red-path {
             animation-name: dash, dash2;
-            animation-duration: 1.2s, 6s;
+            animation-duration: 1.2s, 7.3s;
             animation-delay: 0s, 3s;
             animation-fill-mode: forwards, forwards;
         }
-        #ankunft:checked ~ #container #blue .blue-path {
+        #controls:has(#ankunft:checked) ~ #container #blue .blue-path {
             animation-name: dash, dash3;
-            animation-duration: 1.2s, 4.3s;
+            animation-duration: 1.2s, 5.3s;
             animation-delay: 0s, 3s;
             animation-fill-mode: forwards, forwards;
         }
+
+
 
         /* Container */
 
         #container {
             aspect-ratio: 1.6;
-            height: 100vh;
-            float: right;
+            height: 90vh;
             background-image: url(materials/Background.svg);
             background-size: contain;
             background-repeat: no-repeat;
@@ -272,7 +254,7 @@ body {
             overflow: hidden;
 
             & > * {
-                position: fixed;
+                position: absolute;
             }
 
             .text {
@@ -281,14 +263,14 @@ body {
             }
 
             #grafik {
-                height: 17.7vh;
-                width: 80vh;
-                margin-top: 82.3vh;
+                height: calc(0.9 * 17.7vh);
+                width: calc(0.9 * 80vh);
+                margin-top: calc(0.9 * 82.3vh);
                 overflow: hidden;
 
                 & img {
                     height: 100%;
-                    transform: translateX(-11vh);
+                    transform: translateX(-9.9vh);
                 }
             }
 
@@ -304,9 +286,9 @@ body {
             .line {
                 color: white;
                 font-weight: 350;
-                font-size: 6.9vh;
-                margin-top: 75.9vh;
-                margin-left: 2.9vh;
+                font-size: calc(0.9 * 6.9vh);
+                margin-top: calc(0.9 * 75.9vh);
+                margin-left: calc(0.9 * 2.9vh);
                 text-align: center;
                 text-wrap: nowrap;
                 transform-origin: center;
@@ -318,10 +300,10 @@ body {
             }
 
             .indication-title {
-                margin-left: 10.8vh;
-                margin-top: 2.7vh;
+                margin-left: calc(0.9 * 10.8vh);
+                margin-top: calc(0.9 * 2.7vh);
                 width: max-content;
-                font-size: 7.95vh;
+                font-size: calc(0.9 * 7.95vh);
                 font-weight: 500;
                 color: white;
 
@@ -338,10 +320,10 @@ body {
             }
 
             .destination {
-                margin-top: 90vh;
-                margin-left: 107vh;
-                width: 50vh;
-                font-size: 5vh;
+                margin-top: calc(0.9 * 90vh);
+                margin-left: calc(0.9 * 107vh);
+                width: calc(0.9 * 50vh);
+                font-size: calc(0.9 * 5vh);
                 font-weight: 500;
                 display: flex;
                 justify-content: center;
@@ -353,32 +335,32 @@ body {
                 }
 
                 & img {
-                    height: 5vh;
-                    width: 5vh;
-                    margin-left: 2vh;
+                    height: calc(0.9 * 5vh);
+                    width: calc(0.9 * 5vh);
+                    margin-left: calc(0.9 * 2vh);
                 }
             }
 
             .circles {
                 display: flex;
                 height: fit-content;
-                margin-top: 81.3vh;
-                margin-left: 47vh;
-                gap: 13vh;
+                margin-top: calc(0.9 * 81.3vh);
+                margin-left: calc(0.9 * 47vh);
+                gap: calc(0.9 * 13vh);
                 transition: var(--transition);
 
                 & div {
-                    width: 5vh;
+                    width: calc(0.9 * 5vh);
                     aspect-ratio: 1/1;
                     border-radius: 100%;
-                    border: 0.9vh solid #323232;
+                    border: calc(0.9 * 0.9vh) solid #323232;
                     background: white;
                     transition: var(--transition);
                 }
             }
 
             .indications {
-                font-size: 6vh;
+                font-size: calc(0.9 * 6vh);
                 text-align: center;
                 width: max-content;
                 transform: rotate(-45deg);
@@ -390,28 +372,28 @@ body {
                 }
             }
             .indication1 {
-                margin-top: 73.6vh;
-                margin-left: 50vh;
+                margin-top: calc(0.9 * 73.6vh);
+                margin-left: calc(0.9 * 50vh);
                 transition: 0.5s;
             }
             .indication2 {
-                margin-top: 73.4vh;
-                margin-left: 68vh;
+                margin-top: calc(0.9 * 73.4vh);
+                margin-left: calc(0.9 * 68vh);
             }
             .indication3 {
-                margin-top: 73.2vh;
-                margin-left: 86vh;
+                margin-top: calc(0.9 * 73.2vh);
+                margin-left: calc(0.9 * 86vh);
             }
             .indication4 {
-                margin-top: 73.4vh;
-                margin-left: 104vh;
+                margin-top: calc(0.9 * 73.4vh);
+                margin-left: calc(0.9 * 104vh);
             }
 
             .min {
-                font-size: 4vh;
+                font-size: calc(0.9 * 4vh);
                 font-weight: 500;
-                margin-top: 79vh;
-                margin-left: 34vh;
+                margin-top: calc(0.9 * 79vh);
+                margin-left: calc(0.9 * 34vh);
 
                 & span:nth-of-type(odd) {
                     visibility: hidden;
@@ -420,45 +402,45 @@ body {
             }
 
             #brown {
-                width: 20vh;
-                margin-top: 72vh;
-                margin-left: 48vh;
+                width: calc(0.9 * 20vh);
+                margin-top: calc(0.9 * 72vh);
+                margin-left: calc(0.9 * 49vh);
                 display: none;
             }
             #red {
-                width: 0.6vh;
-                margin-top: 65vh;
-                margin-left: 58.5vh;
+                width: calc(0.9 * 0.6vh);
+                margin-top: calc(0.9 * 65vh);
+                margin-left: calc(0.9 * 59.5vh);
                 display: none;
             }
             #blue {
-                width: 13vh;
-                margin-top: 65vh;
-                margin-left: 56vh;
+                width: calc(0.9 * 13vh);
+                margin-top: calc(0.9 * 65vh);
+                margin-left: calc(0.9 * 57vh);
                 display: none;
             }
             #U6 {
-                width: 7vh;
-                margin-top: 66vh;
-                margin-left: 42vh;
+                width: calc(0.9 * 7vh);
+                margin-top: calc(0.9 * 66vh);
+                margin-left: calc(0.9 * 43vh);
                 visibility: hidden;
                 opacity: 0;
             }
             .red {
-                font-size: 6vh;
+                font-size: calc(0.9 * 6vh);
                 font-weight: 500;
                 color: #E3000F;
-                margin-top: 55vh;
-                margin-left: 56.7vh;
+                margin-top: calc(0.9 * 55vh);
+                margin-left: calc(0.9 * 58vh);
                 visibility: hidden;
                 opacity: 0;
             }
             .blue {
-                font-size: 6vh;
+                font-size: calc(0.9 * 6vh);
                 font-weight: 500;
                 color: #032960;
-                margin-top: 55vh;
-                margin-left: 70vh;
+                margin-top: calc(0.9 * 55vh);
+                margin-left: calc(0.9 * 71vh);
                 visibility: hidden;
                 opacity: 0;
             }
