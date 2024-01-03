@@ -123,10 +123,12 @@ body {
             margin-top: calc(0.9 * 32vh);
             font-size: calc(0.9 * 5.9vh);
             font-weight: 400;
-            position: relative;
+        }
+        #controls:has(#infografik:checked) ~ #container .line i {
+            visibility: hidden;
         }
         #controls:has(#infografik:checked) ~ #container .min {
-            margin-top: calc(0.9 * 51vh);
+            margin-top: calc(0.9 * 90vh);
             margin-left: calc(0.9 * 3vh);
             color: white;
         }
@@ -296,6 +298,10 @@ body {
                 & span:nth-of-type(2n + 3) {
                     visibility: hidden;
                     font-size: 0;
+                }
+
+                & i {
+                    font-style: normal;
                 }
             }
 
