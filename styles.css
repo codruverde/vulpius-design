@@ -375,64 +375,15 @@ body::-webkit-scrollbar {
         grid-row: 6/7;
 
         > a {
-            background-image: url(materials/DC.jpg);
-            cursor: pointer;
+            background-image: url(materials/Labor.jpg);
+            background-size: cover;
+        }
+
+        > a:hover {
+            filter: none;
         }
     }
 
-    #modal {
-        grid-column: 1/2;
-        grid-row: 7/8;
-        width: 80%;
-        max-width: 600px;
-        margin: auto;
-        border: none;
-        z-index: 3;
-
-        #close-modal {
-            height: 50px;
-            background-color: white;
-            border: none;
-            appearance: none;
-            outline: none;
-            cursor: pointer;
-            /* opacity: 0.9; */
-            padding: 5px;
-            margin-left: calc(100% - 50px);
-        }
-        #close-modal:active {
-            border: none;
-        }
-
-        .modal-text {
-            width: 80%;
-            max-width: 400px;
-            margin: auto;
-            margin-bottom: 50px;
-            font-size: 21px;
-            font-weight: 400;
-            color: var(--main);
-        }
-
-        #modal-images {
-            display: flex;
-            margin: auto;
-            margin-bottom: 5%;
-            gap: 5%;
-            width: 90%;
-            height: auto;
-
-            & img {
-                width: calc(50% - 5% / 2);
-                height: auto;
-            }
-        }
-    }
-    #modal::backdrop {
-        background-image: url(materials/Batman.jpg);
-        background-size: cover;
-        opacity: 0.5;
-    }
 
     .projects-description {
         width: 45%;

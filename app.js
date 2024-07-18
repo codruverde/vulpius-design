@@ -29,15 +29,6 @@ const checkbox = document.getElementById('gekko');
   };
 
   const button = document.getElementById('batman-link');
-  const close = document.getElementById('close-modal');
-  const dialogue = document.getElementById('modal');
-
-  button.addEventListener('click', () => {
-      dialogue.showModal();
-    });
-  close.addEventListener('click', () => {
-      dialogue.close();
-    });
 
 
   const link1 = document.getElementById('link1');
