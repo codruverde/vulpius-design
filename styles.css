@@ -247,7 +247,7 @@ body::-webkit-scrollbar {
         transition: 1s;
 
         .about-text {
-            width: 75%;
+            width: 65%;
             padding: 25px 0;
             font-weight: 400;
             font-size: 23px;
