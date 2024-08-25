@@ -18,7 +18,7 @@
     2% {transform:  translateX(2vh), rotate(0);}
     10% {transform: translateX(10vh);}
     30% {transform: translateX(10vh);}
-    100% {transform: translateX(-6vh);}
+    100% {transform: translateX(10vh);}
 }
 
 @keyframes dash {
@@ -27,11 +27,11 @@
     }
 }
 
-@keyframes go {
+/* @keyframes go {
     to {
        transform: translateX(-16vh); 
     }
-}
+} */
 
 @keyframes dash1 {
     to {
@@ -191,7 +191,7 @@ body {
             animation: moving 10s forwards;
             background: orange;
             transition: 0.3s;
-            transition-delay: 8s;
+            transition-delay: 9s;
         }
         #controls:has(#ankunft:checked) ~ #container #grafik img {
             transform: translateX(0);
@@ -237,7 +237,7 @@ body {
         }
         #controls:has(#ankunft:checked) ~ #container #blue .blue-path {
             animation-name: dash, dash3;
-            animation-duration: 1.2s, 5.3s;
+            animation-duration: 1s, 5.3s;
             animation-delay: 0s, 3s;
             animation-fill-mode: forwards, forwards;
         }
@@ -267,12 +267,12 @@ body {
             #grafik {
                 height: calc(0.9 * 17.7vh);
                 width: calc(0.9 * 80vh);
-                margin-top: calc(0.9 * 82.3vh);
+                margin-top: calc(75.1vh);
                 overflow: hidden;
 
                 & img {
-                    height: 100%;
-                    transform: translateX(-9.9vh);
+                    height: 94%;
+                    transform: translateX(-25vh);
                 }
             }
 
@@ -461,7 +461,7 @@ body {
             }
             .blue-path {
                 stroke-dasharray: 350;
-                stroke-dashoffset: -400;
+                stroke-dashoffset: -350;
             }
 
         }
