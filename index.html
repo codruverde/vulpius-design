@@ -7,94 +7,241 @@
   <meta name="description" content="This is my design portfolio website">
   <meta name="keywords" content="Teodor Vulpius, Codrin Teodor Vulpoiu, teodorvulpius">
   <link rel="stylesheet" href="styles.css">
+  <!--
+  /**
+  * @license
+  * MyFonts Webfont Build ID 245868
+  *
+  * The fonts listed in this notice are subject to the End User License
+  * Agreement(s) entered into by the website owner. All other parties are
+  * explicitly restricted from using the Licensed Webfonts(s).
+  *
+  * You may obtain a valid license from one of MyFonts official sites.
+  * http://www.fonts.com
+  * http://www.myfonts.com
+  * http://www.linotype.com
+  *
+  */
+  -->
+  <link rel="stylesheet" type="text/css" href="Antona Font/Antona.css">
   <script defer src="app.js"></script>
-  <title>Vulpius Design</title>
-  <link rel="icon" type="image/x-icon" href="materials/mountain.png">
+  <title>Vulpdesign</title>
+  <link rel="icon" type="image/x-icon" href="materials new/mountain.png">
 </head>
+
+
 <body>
-  <div id="presentation">
-      <input type="checkbox" id="gekko">
-      <label for="gekko"></label>
-      <div class="text welcome">Welcome to my portfolio website</div>
+
+<!-- START -->
+
+<div id="presentation">
+  <input type="checkbox" id="gekko">
+  <label for="gekko"></label>
+  <h2>Welcome to my portfolio website</h2>
+</div>
+
+<!-- MAIN CONTAINER -->
+
+<div id="main-container">
+
+  <div id="entering"></div>
+
+  <!-- MENU -->
+
+  <div id="menu">
+    <div id="menu-buttons">
+      <button button1>About</button>
+      <button button2>Experience</button>
+      <button button3>Skills</button>
+      <button button4>Contact</button>
+    </div>
+    <div id="line-container">
+      <div></div>
+      <div id="circle"></div>
+    </div>
   </div>
-  <div id="container" tabindex="1">
-      <div id="entering"></div>
-      <div id="menu">
-        <div tabindex="0" class="rect rect1"></div>
-        <div tabindex="0" class="rect rect2"></div>
-        <div tabindex="0" class="rect rect3"></div>
-        <div tabindex="0" class="rect rect4"></div>
-        <a href="#" class="menu-links text" id="link1">About</a>
-        <a href="#" onclick="scrollToSection(event, 'section2')" class="menu-links text" id="link2">Projects</a>
-        <a href="#" onclick="scrollToSection(event, 'flexible-design')" class="menu-links text" id="link3">Method</a>
-        <a href="#" class="menu-links text" id="link4">Contact</a>
-      </div>
-      <div class="panels" id="about">
-          <div class="text about-text">My name is Teodor and as a UI and UX Designer, I make sure to create the perfect digital experience with suitable aesthetics for your product.</div>
-      </div>
-      <img src="materials/Road.png" alt="road" id="road">
-      <div id="road-text"></div>
-      <div id="icons-container">
-        <img src="materials/Obsidian.png" alt="Obsidian" class="icons">
-        <img src="materials/CSS.png" alt="CSS" class="icons">
-        <img src="materials/HTML.png" alt="HTML" class="icons">
-        <img src="materials/Premiere Pro.png" alt="Premiere Pro" class="icons">
-        <img src="materials/Figma.png" alt="Figma" class="icons">
-        <img src="materials/Photoshop.png" alt="Photoshop" class="icons">
-        <img src="materials/Google Search Console.png" alt="Google Search Console" class="icons">
-        <img src="materials/Sheets.png" alt="Sheets" class="icons">
-        <img src="materials/Docs.png" alt="Docs" class="icons">
-      </div>
-      <div class="panels projects project1" id="section2">
-        <a href="https://ancientgreeks.org" target="_blank"></a>
-        <div class="projects-description">
-          <a href="https://ancientgreeks.org" target="_blank" class="text">Timeline of ancient Greeks</a>
-          <div class="text projects-description-text">On this website we display over 1300 ancient Greek authors, philosophers, mathematicians and others in a visually intuitive manner, with colour coding by profession. In this way, they can be filtered efficiently.</div>
+
+  <!-- INTRO -->
+
+  <div class="viewport-container" id="start">
+    <div class="inside-box">
+      <h2 id="intro-text">My name is Teodor and as a UI and UX Designer, I make sure to create the perfect user experience with suitable aesthetics for your product.</h2>
+    </div>
+  </div>
+
+  <!-- CREDENTIALS -->
+
+  <div id="credentials-container">
+    <div class="semi-container">
+      <div class="stats-container stats-container1">
+        <img src="materials new/Laptop.svg" alt="Laptop Icon">
+        <div class="stats-text">
+          <div class="number" id="number1">0</div>
+          <h3>client projects</h3>
         </div>
       </div>
-      <div class="panels projects project2">
-        <a href="https://www.scoala2marasesti.ro" target="_blank"></a>
-        <div class="projects-description">
-          <a href="https://www.scoala2marasesti.ro" target="_blank" class="text">Marasesti school website</a>
-          <div class="text projects-description-text">The website of school nr.2 in the historically very important town Marasesti, where the most major battles of WW1 in Romania were fought.</div>
+      <div class="stats-container stats-container2">
+        <img src="materials new/Books.svg" alt="Books Icon" id="books">
+        <div class="stats-text">
+          <div class="number" id="number2">0</div>
+          <h3>domain relevant<br>books read</h3>
         </div>
       </div>
-      <div class="panels projects project3">
-        <a href="https://teodorvulpius.com" target="_blank"></a>
-        <div class="projects-description">
-          <a href="https://teodorvulpius.com" target="_blank" class="text">Music composer website</a>
-          <div class="text projects-description-text">With this portfolio website I made use of glassmorphism as the main visual effect and used overflow containers to hide content seamlessly. The design leaves enough room for future content additions and updates.</div>
-        </div>
+    </div>
+    <div class="semi-container">
+      <div class="document-container">
+        <div class="document document1"></div>
+        <a href="materials new/AbschlussdokumentLehrgaenge_LUX_2_SS2024.pdf" download>
+          <h3>UX Management Degree</h3>
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 20.5C5.45 20.5 4.97933 20.3043 4.588 19.913C4.196 19.521 4 19.05 4 18.5V15.5H6V18.5H18V15.5H20V18.5C20 19.05 19.8043 19.521 19.413 19.913C19.021 20.3043 18.55 20.5 18 20.5H6ZM12 16.5L7 11.5L8.4 10.05L11 12.65V4.5H13V12.65L15.6 10.05L17 11.5L12 16.5Z" fill="#343C3F"/>
+          </svg>
+        </a>
       </div>
-      <div class="panels projects" id="project4">
-        <a id="batman-link"></a>
-        <div class="projects-description">
-          <a class="text">Kronen Zeitung Usability Test</a>
-          <div class="text projects-description-text">I was part of a 4 person UX team that tested the paywall from the Krone.at Website on mobile in a usability lab. My tasks were: setup, metrics, data analysis and in-team organization.</div>
-        </div>
+      <div class="document-container">
+        <div class="document document2"></div>
+        <a href="materials new/Certificate_210384_UXFL-EU_Vulpoiu_01_01_3000.pdf" download>
+          <h3>UXQCC Certificate</h3>
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 20.5C5.45 20.5 4.97933 20.3043 4.588 19.913C4.196 19.521 4 19.05 4 18.5V15.5H6V18.5H18V15.5H20V18.5C20 19.05 19.8043 19.521 19.413 19.913C19.021 20.3043 18.55 20.5 18 20.5H6ZM12 16.5L7 11.5L8.4 10.05L11 12.65V4.5H13V12.65L15.6 10.05L17 11.5L12 16.5Z" fill="#343C3F"/>
+          </svg>
+        </a>
       </div>
-      <div id="ultrawide"><img src="materials/Ultrawide.jpg" alt="ultrawide"></div>
-      <img src="materials/flexible design.png" alt="flexible design" id="flexible-design">
-      <div id="mobile-image"><img src="materials/Subtract.jpg" alt="Subtract"></div>
-      <img src="materials/mobile.png" alt="mobile" id="mobile">
-      <div class="panels method method1">
-        <img src="materials/css.jpg" alt="css">
-        <div class="text method-text">Staying in touch with latest CSS developments. Compatibility with all devices  is a priority.</div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+
+  <div id="projects-container">
+    <div class="project">
+      <button>Read more</button>
+      <div class="project-description">
+        <p>Together with the team from EDD design agency, I worked on 15 web projects for various clients in Germany, 11 of which were in the recruiting industry.<br><br>My tasks were UI design, wireframing, information architecture, prototyping, graphic design and building design systems.</p>
       </div>
-      <div class="panels method method2">
-        <img src="materials/conventions.png" alt="conventions">
-        <div class="text method-text">Respect the well known conventions and accessibility guidelines</div>
+      <a href="https://edd.studio" target="_blank">
+        <h2>EDD − Entwickler Designer Denker</h2>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_264_84)">
+          <path d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#343C3F"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_264_84">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+      </a>
+    </div>
+    <div class="project">
+      <button>Read more</button>
+      <div class="project-description">
+        <p>I was part of a 4 person UX team that tested the paywall system of Krone.at on android smartphone in a usability lab.<br><br>My tasks were protocol, metrics, data evaluation and other technical aspects of the test (setup, recording).</p>
       </div>
-      <div class="panels method method3">
-        <img src="materials/prototype.jpg" alt="prototype">
-        <div class="text method-text">Build prototypes to test the user experience</div>
+      <h2>Kronen Zeitung Usability Test</h2>
+    </div>
+    <div class="project">
+      <button>Read more</button>
+      <div class="project-description">
+        <p>The only complete online timeline of ancient Greek authors, musicians, phiolosphers, mathematicians, scientists, historians, and geographers (totaling 1350) was a private project with research conducted at the University of Vienna Library.<br><br>It was programmed by current Mozilla software engineer, Teodor Tanasoaia. The website was also presented by the National and Kapodistrian University of Athens to their students.</p>
       </div>
-      <div id="what-i-like">
-        <div class="text method-text-last">I like visually harmonious designs that are clean, orderly and functional.</div>
-        <img src="materials/grid.png" alt="grid" id="grid">
+      <a href="https://ancientgreeks.org" target="_blank">
+        <h2>ancientgreeks.org</h2>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_264_84)">
+          <path d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#343C3F"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_264_84">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+      </a>
+    </div>
+    <div class="project">
+      <button>Read more</button>
+      <div class="project-description">
+        <p>In this freelance project, I worked as a designer and developer to create the website for the school nr.2 in the historically important town of Marasesti, Romania.</p>
       </div>
-      <div class="text contact" id="contact">Feel free to contact me for further discussions:<br><a href="mailto:vulpiusteodor@gmail.com">vulpiusteodor@gmail.com</a><br><br><a href="https://www.linkedin.com/in/codrin-teodor-vulpoiu-30943a152/" target="_blank"><img src="materials/LinkedIn_icon.svg" alt="linkedin" style="width: 32px;"></a>&nbsp;&nbsp;&nbsp;<a href="https://www.pinterest.at/codruverde13/" target="_blank"><img src="materials/Pinterest-logo.png" alt="pinterest" style="width: 32px;"></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/codruverde" target="_blank"><img src="materials/GitHub-Mark-32px.png" alt="github"></a></div>
+      <a href="https://www.scoala2marasesti.ro" target="_blank">
+        <h2>Marasesti School Nr.2</h2>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_264_84)">
+          <path d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#343C3F"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_264_84">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  
+  <div class="skills-container" id="skills">
+    <div class="skills-text">
+      <h1>Wireframing</h1>
+      <p>Whether in paper or digital format, wireframes help to solidify the information architecture and give form to the design skeleton. Depending on the product, testing the wireframe can be a very efficient way of preventing usability issues, optimizing the overall structure and finding new ideas before going into the higher cost design phase.<br><br>In Figma I have created a wireframe library that can be imported into any project to create wireframes quickly using the premade components and patterns (inputs, forms, assets etc.). </p>
+    </div>
+    <figure>
+      <video src="materials new/Paper Wireframe.mp4" loop class="videos"></video>
+      <figcaption id="caption1">Paper wireframe for a weather app</figcaption>
+    </figure>
+  </div>
+  <div class="skills-container">
+    <div class="skills-text">
+      <h1>UI Design and Prototyping</h1>
+      <p>Layout, typography and animated interactions are my favourite aspects of visual design and, in my opinion, the most powerful ways to create clear and user-friendly interfaces. Color, imagery and other stylistic effects then need to be used purposefully to enhance the aesthetics, visual hierarchy and provide further usability benefits.<br><br>Figma offers decent prototyping capabilities, but when the need for more complex interactions arises (ex. onscroll animations), I rely mostly on code (HTML, CSS, Javascript).</p>
+    </div>
+    <figure>
+      <video src="materials new/Prototype.mp4" loop class="videos"></video>
+      <figcaption id="caption2">High fidelity prototype for a banking app</figcaption>
+    </figure>
+  </div>
+  <div class="skills-container">
+    <div class="skills-text">
+      <h1>Design Systems</h1>
+      <p>When making design systems, the requirements of all the people that are working with it need to be fulfilled.<br><br>Creating a good documentation, guidelines and simplifying the bridge between design and code is essential for a good design system. There are general “rules” or principles that need to be respected, but most aspects (ex. variable structure, style guide and component libraries) are specific to each project and the people that are working on it.</p>
+    </div>
+    <figure>
+      <img src="materials new/IA Aliasing.png" alt="Design system aliasing structure">
+      <figcaption id="caption3">Design system aliasing structure for a recipe app</figcaption>
+    </figure>
+  </div>
+  <div class="skills-container" id="skills2">
+    <div class="skills-text">
+      <h1>Usability Testing</h1>
+      <p>An essential part of the iterative design process, the usability test reveals problems of the product and insights about the users. It reveals issues that are very hard to predict or expect, even with sufficient research.<br><br>I like to focus on the metrics, protocol and technical aspects of the usability test, to assure that the results are reliable and easy to interpret. The type of usability test heavily depends on the current state of the product and the hypotheses and questions that were formulated beforehand. In other words, what are we trying to find out?</p>
+    </div>
+    <div id="image-container">
+      <figure>
+        <img src="materials new/usability test.jpg" alt="Eye Tracking session">
+        <figcaption id="caption4">Eye tracking session at Technikum Wien Academy</figcaption>
+      </figure>
+      <figure>
+        <img src="materials new/metrics.png" alt="usability test metrics">
+        <figcaption id="caption5">Metrics from a usability test at Technikum Wien Academy</figcaption>
+      </figure>
+    </div>
   </div>
   
+  <!-- CONTACT -->
+
+  <div class="viewport-container" id="contact">
+    <div class="inside-box">
+      <h2>Feel free to contact me for more information:<br><a href="mailto:vulpiusteodor@gmail.com" target="_blank">vulpiusteodor@gmail.com</a></h2>
+      <div id="links-container">
+        <a href="https://www.linkedin.com/in/codrin-teodor-vulpoiu-30943a152/" target="_blank"></a>
+        <a href="https://github.com/codruverde" target="_blank"></a>
+        <a href="https://at.pinterest.com/codruverde13/" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
