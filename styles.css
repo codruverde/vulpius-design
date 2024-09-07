@@ -609,7 +609,8 @@ body::-webkit-scrollbar {
     }
     
     #presentation {
-
+        height: 100svh;
+        
         h2 {
             font-size: 20px;
             line-height: 25px;
@@ -623,6 +624,7 @@ body::-webkit-scrollbar {
         height: max-content;
         max-height: max-content;
         width: 100vw;
+        overflow: hidden;
 
         /* MENU */
 
@@ -644,7 +646,7 @@ body::-webkit-scrollbar {
         /* INTRO */
 
         .viewport-container {
-            height: 100vh;
+            height: 100svh;
             width: 100vw;
 
             .inside-box {
