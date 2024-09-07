@@ -3,33 +3,49 @@ const checkbox = document.getElementById('gekko');
 const pres = document.getElementById('presentation');
 const body = document.body;
 
+// Prevent default scroll behavior when the screen is less than 650px wide
+function preventScroll(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  return false;
+}
+
+// Disable scroll for screens smaller than 650px by default
+if (window.matchMedia("(max-width: 650px)").matches) {
+  window.addEventListener('scroll', preventScroll);
+}
+
+// Function to handle scrolling behavior based on screen size
 checkbox.addEventListener('change', function() {
   if (this.checked) {
     // Use horizontal scrolling for larger screens, vertical for smaller screens
     if (window.matchMedia("(min-width: 650px)").matches) {
       body.style.overflowX = 'scroll';
       body.style.overflowY = 'hidden';
+
+      // Enable horizontal scrolling with the mouse wheel
+      window.addEventListener('wheel', function(event) {
+        if (event.deltaY !== 0) {
+          document.documentElement.scrollLeft += event.deltaY;
+          event.preventDefault(); // Prevent default vertical scroll
+        }
+      });
+
     } else {
+      // For smaller screens (less than 650px)
       body.style.overflowY = 'scroll';
       body.style.overflowX = 'hidden';
+
+      // Allow vertical scrolling again by removing the scroll event listener
+      window.removeEventListener('scroll', preventScroll);
     }
 
     setTimeout(function() {
       pres.style.zIndex = "-1";
     }, 2200); // Delay of 2.2 seconds
-
-    // Enable scrolling with the mouse wheel after the checkbox is checked
-    window.addEventListener('wheel', function(event) {
-      if (window.matchMedia("(min-width: 650px)").matches) {
-        // Horizontal scrolling for large screens
-        if (event.deltaY !== 0) {
-          document.documentElement.scrollLeft += event.deltaY;
-          event.preventDefault(); // Prevent default vertical scroll
-        }
-      }
-    });
   }
 });
+
 
 // Reset scroll history
 if (history.scrollRestoration) {
@@ -124,7 +140,7 @@ function createObserver(target, start, end, duration) {
         observer.unobserve(entry.target); // Stop observing after the animation
       }
     });
-  });
+  }, { threshold: 0.3 });
 
   observer.observe(target); // Start observing the target element
 }

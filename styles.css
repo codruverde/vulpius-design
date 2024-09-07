@@ -644,7 +644,7 @@ body::-webkit-scrollbar {
         /* INTRO */
 
         .viewport-container {
-            height: 100svh;
+            height: 100vh;
             width: 100vw;
 
             .inside-box {
