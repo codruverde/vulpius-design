@@ -140,7 +140,7 @@ function createObserver(target, start, end, duration) {
         observer.unobserve(entry.target); // Stop observing after the animation
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 1 });
 
   observer.observe(target); // Start observing the target element
 }
