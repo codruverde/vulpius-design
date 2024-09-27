@@ -153,7 +153,7 @@ const number2 = document.getElementById("number2");
 createObserver(number1, 0, 17, 1500);
 
 // Create an observer for number2 to animate from 0 to 28
-createObserver(number2, 0, 28, 1500);
+createObserver(number2, 0, 29, 1500);
 
 // Scroll animation for the circle margin based on the visible section
 const skills2 = document.getElementById("skills2");
