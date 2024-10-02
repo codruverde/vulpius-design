@@ -150,7 +150,7 @@ const number1 = document.getElementById("number1");
 const number2 = document.getElementById("number2");
 
 // Create an observer for number1 to animate from 0 to 17
-createObserver(number1, 0, 17, 1500);
+createObserver(number1, 0, 18, 1500);
 
 // Create an observer for number2 to animate from 0 to 28
 createObserver(number2, 0, 29, 1500);
